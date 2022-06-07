@@ -1,0 +1,118 @@
+:root
+{
+    --pyramide-size: 400px;
+    --pyramide-size-anti: 0;
+    
+    --pyramide-size-top: 300px;
+    --pyramide-top-margin: 0;
+  
+    --pyramide-height: 200px;
+
+    --side-length: 0;
+    --side-length-anti: 0;
+    --side-length-difference: 0;
+
+    --pyramide-angle-anti: 0;
+    --pyramide-angle-difference-anti: 0;
+}
+.pyramide 
+{
+    position: absolute;
+    width: var(--pyramide-size);
+    height: var(--pyramide-size);
+  transform: rotateX(60deg) rotate(45deg);
+  transform-style: preserve-3d;
+  /* perspective: 3000px; */
+  /* animation: rot 60s linear infinite; */
+  animation: rot3 2s linear 1;
+}
+@keyframes rot {
+  0% {
+    transform: rotateX(60deg) rotate(45deg);
+  }
+  100% {
+    transform: rotateX(60deg) rotate(405deg);
+  }
+}
+@keyframes rot3 {
+  0% {
+    transform: rotateX(60deg) rotate(45deg) translateZ(-1000px);
+    width: 5px;
+    height: 5px;
+  }
+  100% {
+    transform: rotateX(60deg) rotate(135deg) translateZ(0);
+    width: var(--pyramide-size);
+    height: var(--pyramide-size);
+  }
+}
+.sides {
+  width: var(--pyramide-size);
+  height: var(--side-length);
+  position: absolute;
+  background: #fffaeb86;
+  /* background: #fff; */
+}
+.left 
+{
+  transform-origin: bottom;
+  transform: translate3d(0, var(--side-length-difference), 0) rotateX(var(--pyramide-angle-anti));
+  /* background: linear-gradient(90deg, #222, #00e7ff); */
+}
+.right 
+{
+    transform-origin: bottom;
+    transform: translate3d(0, var(--side-length-anti), 0) rotateX(var(--pyramide-angle-difference-anti));
+}
+.front 
+{
+    transform-origin: left bottom;
+    transform:  rotateZ(90deg) translate3d(var(--side-length-anti), 0, 0) rotateX(var(--pyramide-angle-anti));
+}
+.back
+{
+    transform-origin: left bottom;
+    transform: rotateZ(90deg) translate3d(var(--side-length-anti), var(--pyramide-size-anti), 0) rotateX(var(--pyramide-angle-difference-anti));
+}
+.clip-bevel
+{
+    clip-path: polygon(0% 100%, var(--pyramide-top-margin) 0%, calc(var(--pyramide-size) - var(--pyramide-top-margin)) 0%, 100% 100%);
+}
+.bottom
+{
+    position: absolute;
+    height: var(--pyramide-size);
+    width: var(--pyramide-size);
+    transform-origin: bottom;
+    transform: translateZ(0);
+    background: red;
+}
+.top
+{
+    position: absolute;
+    height: var(--pyramide-top);
+    width: var(--pyramide-top);
+    transform-origin: center;
+    transform: translate3d(var(--pyramide-top-margin), var(--pyramide-top-margin), var(--pyramide-height));
+    background: rgba(0, 0, 255, 1);
+}
+.light
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: black;
+    animation: light-change 60s linear infinite;
+    opacity: 0;
+}
+@keyframes light-change 
+{
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+.texture
+{
+  mix-blend-mode: multiply;
+  opacity: 0.2;
+}

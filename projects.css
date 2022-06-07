@@ -1,0 +1,203 @@
+.projects-scroll-area
+{
+    position: relative;
+    height: fit-content;
+    /* max-height: 90vh; */
+    width: 100%;
+
+    overflow-x: hidden; 
+	overflow-y: scroll;
+    scrollbar-width: none;
+    /* scrollbar-width: thin; */
+	scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0);
+    /* mix-blend-mode: hard-light; */
+
+    /* background: radial-gradient(circle at top left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 25%); */
+
+    /* mask: 
+    radial-gradient(circle at top left, rgba(0, 0, 0, 0) 120px, rgba(0, 0, 0, 1) 150px),
+    radial-gradient(circle at bottom left, rgba(0, 0, 0, 0) 120px, rgba(0, 0, 0, 1) 150px);
+    mask-repeat:no-repeat; */
+    /* linear-gradient(rgba(0, 0, 0, 0) 0px, black var(--frame-margin), black calc(100% - var(--frame-margin)), rgba(0, 0, 0, 0) 100%); */
+}
+.project-spaces
+{
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+.project-cell-container
+{
+    position: relative;
+    height: auto;
+    width: 100%;
+    min-width: calc(var(--width-unit) * 2);
+
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.project-cell
+{
+    position: relative;
+    height: calc(var(--width-unit) * 2);
+    width: 100%;
+    max-width: calc(var(--width-unit) * 3);
+    min-width: calc(var(--width-unit) * 2);
+    cursor: default;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center; 
+}
+.project-circle
+{
+    position: absolute;
+    height: var(--circle-size);
+    width: var(--circle-size);
+    border-radius: 50%;
+    /* transform-origin: right bottom; */
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.7);
+    mask-image: radial-gradient(circle at top left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 80%);
+    -webkit-mask-image: radial-gradient(circle at top left, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 80%);
+    
+    transform: translateX(calc(var(--circle-size-half) - var(--width-unit))) rotate(160deg);
+}
+/* .project-circle:hover
+{
+    height: 1050px;
+    width: 1050px;
+    opacity: 0;
+    transition: all 1s;
+} */
+
+
+/* ===== Л О Г О ===== */
+.project-cell-logo-container
+{
+    position: relative;
+    top: 0;
+    right: 0;
+    height: 0;
+    width: 100%;
+    max-width: calc(var(--width-unit) * 3);
+}
+.project-cell-logo
+{
+    position: relative;
+    height: var(--logo-size);
+    width: var(--logo-size);
+    transform: translateX(calc(var(--width-unit) - var(--logo-size-half))) translateY(-50%);
+    filter: var(--filter-light-color);
+}
+
+/* ===== Т Е К С Т ===== */
+.project-cell-description-container
+{
+    position: relative;
+    top: 0;
+    right: 0;
+    height: fit-content;
+    width: 100%;
+    max-width: calc(var(--width-unit) * 2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+.project-text-spaces
+{
+    position: relative;
+    height: 10px;
+    width: 100%;
+}
+.project-cell-title
+{
+    margin-bottom: var(--between-description-margin);
+    position: relative;
+    font-family: "Square721";
+    font-size: 28px;
+    text-align: right;
+    color: #5C5C5C;
+}
+.project-cell-text
+{
+    margin-top: var(--between-description-margin);
+    position: relative;
+    font-family: "Mina";
+    font-size: var(--font-size);
+    text-align: right;
+    color: #5C5C5C;
+}
+
+/* ===== К Н О П К А ===== */
+.project-cell-button-container
+{
+    position: relative;
+    right: -50px;
+    height: 50px;
+    width: 100%;
+
+    overflow-x: visible;
+    overflow-y: hidden;
+}
+.project-cell-button
+{
+    position: absolute;
+    right: 50px;
+    height: 100%;
+    width: fit-content;
+    background: #5C5C5C;
+    /* border-radius: 100px; */
+    cursor: pointer;
+    opacity: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+
+    transition: all 1s;
+
+    transform: scale(1);
+}
+.project-cell-button-corners
+{
+    position: absolute;
+    height: 43px;
+    width: 43px;
+    background: #5C5C5C;
+    border-radius: 13px;
+
+    transform: rotate(45deg);
+}
+.project-cell-button-text-frameOut, .project-cell-button-text-frameIn
+{
+    position: relative;
+    top: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: "Mina";
+    font-size: var(--font-size);
+    vertical-align: bottom;
+}
+.project-cell-button-text-frameOut
+{
+    color: #5C5C5C;
+}
+.project-cell-button-text-frameIn
+{
+    color: lightyellow;
+}
+
+.project-cell-button:active
+{
+    transform: scale(0.95);
+}
+.project-cell:hover > .project-cell-description-container > .project-cell-button-container > .project-cell-button:last-child
+{
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+

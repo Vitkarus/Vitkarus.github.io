@@ -1,0 +1,17 @@
+.MP-menu-title
+{
+    width: calc(var(--main-pillar-size) + 30px);
+    height: calc(var(--main-pillar-size) + 30px);
+}
+.MP-menu-title-text
+{
+    position: absolute;
+    /* transform: translate3d(200px, 0, 0); */
+    font-family: "Square721";
+    font-size: 40px;
+    margin-top: 12px;
+    margin-left: 20px;
+    
+    
+    color: coral;
+}

@@ -1,0 +1,118 @@
+.projects-scroll-area
+{
+    --between-description-margin: 10px;
+
+    position: relative;
+    height: fit-content;
+    max-height: 90vh;
+    width: 100%;
+
+    overflow-x: hidden; 
+	overflow-y: scroll;
+    scrollbar-width: none;
+    /* scrollbar-width: thin; */
+	scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0);
+    /* mix-blend-mode: hard-light; */
+
+    mask-image: linear-gradient(rgba(0, 0, 0, 0) 0px, black var(--frame-margin), black calc(100% - var(--frame-margin)), rgba(0, 0, 0, 0) 100%);
+}
+
+.project-spaces
+{
+    position: relative;
+    height: 50px;
+    width: 100%;
+}
+.project-cell
+{
+    position: relative;
+    height: auto;
+    min-height: 350px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+
+    background: var(--ELC-glass-color1);
+    transition: all 1s;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+}
+.project-cell:hover
+{
+    background: rgba(0, 0, 0, 0.1);
+    transition: all 1s;
+}
+.project-grid
+{
+    position: relative;
+    height: fit-content;
+    width: auto;
+    margin: var(--frame-margin);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit,  minmax(150px, 1fr));
+}
+.project-grid>div:last-child
+{
+    grid-column: span 4;
+}
+
+/* ===== Л О Г О ===== */
+.project-cell-logo-container
+{
+    height: auto;
+    width: 130%;
+    margin-right: 200px;
+    margin-bottom: calc(var(--between-description-margin) * 2);
+
+    display: flex;
+    align-items: center;
+    justify-content: left; 
+}
+.project-cell-logo
+{
+    position: relative;
+    height: 150px;
+    width: 150px;
+}
+
+/* ===== Т Е К С Т ===== */
+.project-cell-description-container
+{
+    height: auto;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center; 
+}
+.project-cell-title
+{
+    margin-bottom: var(--between-description-margin);
+    position: relative;
+    font-family: "Square721";
+    font-size: 30px;
+    color: #5C5C5C;
+}
+.project-cell-text
+{
+    margin-top: var(--between-description-margin);
+    position: relative;
+    font-family: "Mina";
+    font-size: var(--font-size);
+    color: #5C5C5C;
+}
+
+
+.project-background
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

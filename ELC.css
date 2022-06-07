@@ -1,0 +1,314 @@
+.ELC-offset
+{
+    position: relative;
+    /* height: 80px; */
+    height: calc(var(--ELC-offset-height-global) + var(--s) * var(--ELC-offset-step-global));
+    /* width: calc(50% + var(--s) * 10px); */
+    width: var(--ELC-offset-width-global);
+    left: 0;
+    /* background: white; */
+    z-index: var(--z);
+    transform: translateX(0);
+
+    transition: all 1.5s;
+}
+.ELC-wrapper-0, .ELC-wrapper-1, .ELC-wrapper-next
+{
+    position: absolute;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+
+    /* transform-style: preserve-3d; */
+    
+    z-index: 4;
+}
+.ELC-container
+{
+    position: absolute;
+    height: var(--ELC-height);
+    width: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+
+    perspective: 1500px;
+
+    transform: rotateZ(0deg);
+
+    cursor: pointer;
+
+    transition: all 1.5s;
+
+}
+.ELC-container > div, .ELC-container > div > div, .ELC-container > div > div > div
+{
+    transition: all 1.5s;
+}
+
+/* Нативный ховер */
+.ELC-container:hover > div > div
+{
+    transition: all 0.5s;
+    background: var(--ELC-glov-color1);
+}
+.ELC-container:hover > div > div > div
+{
+    transition: all 0.5s;
+    opacity: 0;
+}
+.ELC-container:hover .ELC-lightning-background
+{
+    transition: all 0.5s;
+    opacity: 1;
+}
+.ELC-container:hover .ELC-lightning-flare
+{
+    transition: all 0.5s;
+    opacity: 1;
+}
+.ELC-container:hover > div > .ELC-texture
+{
+    transition: all 0.5s;
+    opacity: 0;
+}
+/* Ховер для js */
+.ELC-container-hover > div > div
+{
+    transition: all 0.5s;
+    background: var(--ELC-glov-color1);
+}
+.ELC-container-hover > div > div > div
+{
+    transition: all 0.5s;
+    opacity: 0;
+}
+.ELC-container-hover .ELC-lightning-background
+{
+    transition: all 0.5s;
+    opacity: 1;
+}
+.ELC-container-hover .ELC-lightning-flare
+{
+    transition: all 0.5s;
+    opacity: 1;
+}
+.ELC-container-hover > div > .ELC-texture
+{
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+/* .ELC-container:hover 
+{
+    --ELC-length: 330px;
+} */
+
+
+/* .ELC-container-2:hover
+{
+    --ELC-length: 30px;
+    --ELC-border-radius: 15px;
+    --ELC-height: 200px;
+    filter: blur(10px);
+    transform: rotateZ(5deg);
+} */
+
+
+.ELC-top, .ELC-bottom
+{
+    position: absolute;
+    height: var(--ELC-length);
+    width: var(--ELC-length);
+    background: var(--ELC-glass-color);
+    border-radius: var(--ELC-border-radius);
+
+    overflow: hidden;
+}
+.ELC-top
+{
+    top: 0;
+    transform: translateY(-50%) rotateX(60deg) rotate(45deg);
+    z-index: 3;
+}
+.ELC-bottom
+{
+    bottom: 0;
+    transform: translateY(50%) rotateX(60deg) rotate(45deg);
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.ELC-side
+{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: var(--ELC-width); /* 141px */
+    background: var(--ELC-glass-color);
+
+    z-index: 2;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.ELC-texture
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* border-radius: var(--ELC-border-radius); */
+    background-size: cover; 
+    /* background-image: url("assets/noise2.png"); */
+    mix-blend-mode:multiply;
+}
+
+/* ==== Т Е Н И = В Е Р Х ===== */
+
+.ELC-lightning-top
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: var(--ELC-top-shadow-NW) auto var(--ELC-top-shadow-SE);
+    grid-template-rows: var(--ELC-top-shadow-NE) auto var(--ELC-top-shadow-SW);
+}
+.ELC-lightning-top-empty
+{
+    width: 100%;
+    height: 100%;
+}
+.ELC-lightning-top-shadow
+{
+    width: 100%;
+    height: 100%;
+    background: var(--shadow-color3);
+    filter: blur(30px);
+}
+
+/* ==== Т Е Н И = Н И З ===== */
+
+.ELC-lightning-side
+{
+    position: absolute;
+    height: 100%;
+    width: calc(var(--ELC-width) * 1);
+
+    display: flex;
+    align-items: center;
+    justify-content: left; 
+}
+.ELC-lightning-bottom
+{
+    position: absolute;
+    height: 200%;
+    width: calc(var(--ELC-width) * 1);
+    
+
+    transform: rotateX(0deg) rotate(-45deg);
+
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.ELC-lightning-segment-1
+{
+    position: relative;
+    height: 100%;
+    width: calc(var(--ELC-border-radius));
+    max-width: calc(var(--ELC-width) / 4);
+    background: linear-gradient(90deg, var(--shadow-color4), var(--shadow-color3));
+}
+.ELC-lightning-segment-2
+{
+    position: relative;
+    height: 100%;
+    width: calc((var(--ELC-width) / 2) - (var(--ELC-border-radius) * 2));
+    background: var(--shadow-color3);
+}
+.ELC-lightning-segment-3
+{
+    position: relative;
+    height: 100%;
+    width: calc(var(--ELC-border-radius) * 2);
+    max-width: calc(var(--ELC-width) / 2);
+    background: linear-gradient(90deg, var(--shadow-color3), var(--shadow-color1));
+}
+.ELC-lightning-segment-4
+{
+    position: relative;
+    height: 100%;
+    width: calc((var(--ELC-width) / 2) - (var(--ELC-border-radius) * 2));
+    background: var(--shadow-color1);
+}
+.ELC-lightning-segment-5
+{
+    position: relative;
+    height: 100%;
+    width: calc(var(--ELC-border-radius));
+    max-width: calc(var(--ELC-width) / 4);
+    background: linear-gradient(90deg, var(--shadow-color1), var(--shadow-color2));
+}
+
+/* ===== С В Е Т ===== */
+.ELC-lightning-background
+{
+    position: absolute;
+    height: calc(var(--ELC-length) + 50px);
+    width: calc(var(--ELC-length) + 50px);
+    background: var(--ELC-glov-color1);
+    border-radius: var(--ELC-border-radius);
+    opacity: 0;
+
+    filter: blur(30px);
+
+    transform: rotateX(60deg) rotate(45deg);
+    z-index: 0;
+}
+.ELC-lightning-flare
+{
+    position: absolute;
+    height: 30px;
+    width: calc(var(--ELC-length) + 300px);
+    background: var(--ELC-glov-color1);
+    border-radius: 50%;
+    opacity: 0;
+
+    filter: blur(15px);
+    z-index: 0;
+}
+.ELC-lightning-receiving
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: var(--ELC-glov-color1);
+    opacity: 0;
+}
+
+
+/* ===== E T C ===== */
+.ELC-big-divs
+{
+    position: relative;
+    height: 100%;
+}
+.ELC-margins
+{
+    position: relative;
+    height: var(--ELC-margins-global);
+    pointer-events: none;
+    transition: all 1.5s;
+}

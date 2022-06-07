@@ -1,0 +1,466 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="pyramide.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="MP.css">
+        <link rel="stylesheet" href="MP-split.css">
+        <link rel="stylesheet" href="MP-titles.css">
+        <link rel="stylesheet" href="ELC.css">
+        <link rel="stylesheet" href="ELC-wrappers.css">
+        <link rel="stylesheet" href="CT.css">
+        <link rel="stylesheet" href="ST.css">
+        <link rel="stylesheet" href="menus.css">
+        <link rel="stylesheet" href="about.css">
+        <link rel="stylesheet" href="projects.css">
+        <link rel="stylesheet" href="links.css">
+        <script src="script.js"></script> 
+    </head>
+<body onload="init()">
+    <div id="background" class="background">
+        <div class="background-cell"></div>
+    </div>
+    <!-- <div class="blend-wrapper-blur"></div> -->
+    <div class="container">
+        <!-- <div id="CTarea" class="CT-area">
+            <div id="CT" class="CT"></div>
+        </div> -->
+        <!-- <div id="temp" style="color: blue">TEMP</div>
+        <div id="test" style="color: blue">TEST</div> -->
+        <div id="pillar" class="container-MP" style="mix-blend-mode: hard-light;"> <!--overlay, color-dodge, hard-light -->
+            <!-- <div class="ELC-big-divs"></div> -->
+            <div class="ELC-margins"></div>
+            <div class="ELC-offset" style="--z:1; --s:1">
+                <div class="ST-textlink-container">
+                    <div class="ST" onmouseover="activateMenu('aboutText', 'menu')" onmouseout="deactivateMenu('aboutText', 'menu')" onmouseup="stateMachine('about')">a b o u t</div>
+                    <div class="ST-link"></div>
+                </div>
+                <div class="ST-frame-container">
+                    <div class="ST-frame-mask">
+                        <div class="ST-frame"></div>
+                    </div>
+                </div>
+                <div id="ELCwrapper1" class="ELC-wrapper-1">
+                    <div id="ELCcontainer1" class="ELC-container" onmouseover="startReflectLight(1)" onmouseout="stopReflectLight(1)">
+                        <div class="ELC-lightning-background"></div>
+                        <div class="ELC-lightning-flare"></div>
+                        <div class="ELC-top">
+                            <div class="ELC-lightning-top">
+                                <div class="ELC-lightning-top-empty"></div>
+                                <div class="ELC-lightning-top-empty"></div>
+                                <div class="ELC-lightning-top-empty"></div>
+                                <div class="ELC-lightning-top-empty"></div>
+                                <div class="ELC-lightning-top-shadow"></div>
+                                <div class="ELC-lightning-top-empty"></div>
+                                <div class="ELC-lightning-top-empty"></div>
+                                <div class="ELC-lightning-top-empty"></div>
+                                <div class="ELC-lightning-top-empty"></div>
+                            </div>
+                            <div class="ELC-texture"></div>
+                            <div class="ELC-lightning-receiving"></div>
+                        </div>
+                        <div class="ELC-side">
+                            <div class="ELC-lightning-side">
+                                <div class="ELC-lightning-segment-1"></div>
+                                <div class="ELC-lightning-segment-2"></div>
+                                <div class="ELC-lightning-segment-3"></div>
+                                <div class="ELC-lightning-segment-4"></div>
+                                <div class="ELC-lightning-segment-5"></div>
+                            </div>
+                            <div class="ELC-texture"></div>
+                            <div class="ELC-lightning-receiving"></div>
+                        </div>
+                        <div class="ELC-bottom">
+                            <div class="ELC-lightning-bottom">
+                                 <div class="ELC-lightning-segment-1"></div>
+                                <div class="ELC-lightning-segment-2"></div>
+                                <div class="ELC-lightning-segment-3"></div>
+                                <div class="ELC-lightning-segment-4"></div>
+                                <div class="ELC-lightning-segment-5"></div>
+                            </div>
+                            <div class="ELC-texture"></div>
+                            <div class="ELC-lightning-receiving"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ELC-margins"></div>
+            <div class="ELC-offset" style="--z:0; --s:0">
+                <div class="ST-textlink-container">
+                    <div class="ST" onmouseover="activateMenu('projectsText', 'menu')" onmouseout="deactivateMenu('projectsText', 'menu')" onmouseup="stateMachine('projects')">p r o j e c t s </div>
+                    <div class="ST-link"></div>
+                </div>
+                <div class="ST-frame-container">
+                    <div class="ST-frame-mask">
+                        <div class="ST-frame"></div>
+                    </div>
+                </div>
+                <div id="ELCwrapper0" class="ELC-wrapper-0">
+                    <div id="ELCcontainer0" class="ELC-container" onmouseover="startReflectLight(0)" onmouseout="stopReflectLight(0)">
+                        <div class="ELC-lightning-background"></div>
+                        <div class="ELC-lightning-flare"></div>
+                        <div class="ELC-top">
+                            <div class="ELC-lightning-top">
+                                <div class="ELC-lightning-top-empty"></div>
+                                <div class="ELC-lightning-top-empty"></div>
+                                <div class="ELC-lightning-top-empty"></div>
+                                <div class="ELC-lightning-top-empty"></div>
+                                <div class="ELC-lightning-top-shadow"></div>
+                                <div class="ELC-lightning-top-empty"></div>
+                                <div class="ELC-lightning-top-empty"></div>
+                                <div class="ELC-lightning-top-empty"></div>
+                                <div class="ELC-lightning-top-empty"></div>
+                            </div>
+                            <div class="ELC-texture"></div>
+                            <div class="ELC-lightning-receiving"></div>
+                        </div>
+                        <div class="ELC-side">
+                            <div class="ELC-lightning-side">
+                                <div class="ELC-lightning-segment-1"></div>
+                                <div class="ELC-lightning-segment-2"></div>
+                                <div class="ELC-lightning-segment-3"></div>
+                                <div class="ELC-lightning-segment-4"></div>
+                                <div class="ELC-lightning-segment-5"></div>
+                            </div>
+                            <div class="ELC-texture"></div>
+                            <div class="ELC-lightning-receiving"></div>
+                        </div>
+                        <div class="ELC-bottom">
+                            <div class="ELC-lightning-bottom">
+                                 <div class="ELC-lightning-segment-1"></div>
+                                <div class="ELC-lightning-segment-2"></div>
+                                <div class="ELC-lightning-segment-3"></div>
+                                <div class="ELC-lightning-segment-4"></div>
+                                <div class="ELC-lightning-segment-5"></div>
+                            </div>
+                            <div class="ELC-texture"></div>
+                            <div class="ELC-lightning-receiving"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ELC-margins"></div>
+            <div class="ELC-offset" style="--z:-1; --s:1">
+                <div class="ST-textlink-container">
+                    <div class="ST" onmouseover="activateMenu('linksText', 'menu')" onmouseout="deactivateMenu('linksText', 'menu')" onmouseup="stateMachine('links')">l i n k s</div>
+                    <div class="ST-link"></div>
+                </div>
+                <div class="ST-frame-container">
+                    <div class="ST-frame-mask">
+                        <div class="ST-frame"></div>
+                    </div>
+                </div>
+                <div id="ELCwrapper-1" class="ELC-wrapper-1">
+                    <div id="ELCcontainer-1" class="ELC-container" onmouseover="startReflectLight(-1)" onmouseout="stopReflectLight(-1)">
+                        <div class="ELC-lightning-background"></div>
+                        <div class="ELC-lightning-flare"></div>
+                        <div class="ELC-top">
+                            <div class="ELC-lightning-top">
+                                <div class="ELC-lightning-top-empty"></div>
+                                <div class="ELC-lightning-top-empty"></div>
+                                <div class="ELC-lightning-top-empty"></div>
+                                <div class="ELC-lightning-top-empty"></div>
+                                <div class="ELC-lightning-top-shadow"></div>
+                                <div class="ELC-lightning-top-empty"></div>
+                                <div class="ELC-lightning-top-empty"></div>
+                                <div class="ELC-lightning-top-empty"></div>
+                                <div class="ELC-lightning-top-empty"></div>
+                            </div>
+                            <div class="ELC-texture"></div>
+                            <div class="ELC-lightning-receiving"></div>
+                        </div>
+                        <div class="ELC-side">
+                            <div class="ELC-lightning-side">
+                                <div class="ELC-lightning-segment-1"></div>
+                                <div class="ELC-lightning-segment-2"></div>
+                                <div class="ELC-lightning-segment-3"></div>
+                                <div class="ELC-lightning-segment-4"></div>
+                                <div class="ELC-lightning-segment-5"></div>
+                            </div>
+                            <div class="ELC-texture"></div>
+                            <div class="ELC-lightning-receiving"></div>
+                        </div>
+                        <div class="ELC-bottom">
+                            <div class="ELC-lightning-bottom">
+                                 <div class="ELC-lightning-segment-1"></div>
+                                <div class="ELC-lightning-segment-2"></div>
+                                <div class="ELC-lightning-segment-3"></div>
+                                <div class="ELC-lightning-segment-4"></div>
+                                <div class="ELC-lightning-segment-5"></div>
+                            </div>
+                            <div class="ELC-texture"></div>
+                            <div class="ELC-lightning-receiving"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ELC-margins"></div>
+            <!-- <div class="ELC-big-divs"></div> -->
+        </div>
+        <!-- <div style="position: absolute; top: 0; left: 0; height: 100px; width: 100px; background: yellow; z-index: 200;" onmousedown="stateMachine('menu')">CLOSE BUTTON</div> -->
+        <div id="about" class="menus-container" style="height: 100%;">
+            <div class="menus-title">about</div>
+            <div class="about-frame-container">
+                <div class="about-frame-corners" style="top: 0; left: 0;"></div>
+                <!-- <div class="about-frame-corners" style="top: 0; left: 100%; transform: rotate(90deg);"></div> -->
+                <!-- <div class="about-frame-corners" style="top: 100%; left: 0; transform: rotate(-90deg);"></div> -->
+                <div class="about-frame-corners" style="top: 100%; left: 100%; transform: rotate(180deg);"></div>
+                <div class="about-text-container">
+                    <div class="about-text-empty"></div>
+                    <div class="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nisl nisi scelerisque eu ultrices vitae auctor eu augue. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Quisque egestas diam in arcu cursus euismod quis. Enim tortor at auctor urna nunc id cursus.</div>
+                    <div class="about-text-empty"></div>
+                </div>
+            </div>
+        </div>
+        <div id="projects" class="menus-container">
+            <div class="projects-scroll-area">
+                <div class="project-spaces" style="height: 150px;"></div>
+                <div class="menus-title">projects</div>
+                <div class="project-spaces" style="height: 150px;"></div>
+                <div class="project-cell-container">
+                    <div class="project-cell">
+                        <div class="project-circle"></div>
+                        <!-- <img class="project-background" src="assets/CSK_bgn.png"> -->
+                        <div class="project-cell-logo-container">
+                            <img class="project-cell-logo" src="assets/pics/projects/US_logo.svg">
+                        </div>
+                        <div class="project-cell-description-container">
+                            <div class="project-cell-title">UNDER SIGHT</div>
+                            <div class="project-text-spaces"></div>
+                            <div class="project-cell-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nisl nisi scelerisque eu ultrices vitae auctor eu augue. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus.</div>
+                            <div class="project-text-spaces"></div>
+                            <div class="project-text-spaces"></div>
+                            <div class="project-cell-button-container">
+                                <div class="project-cell-button" style="opacity: 1; background: none;">
+                                    <div class="project-cell-button-text-frameOut">Learn more about this case on <b>Behance</b></div>
+                                </div>
+                                <div class="project-cell-button">
+                                    <div class="project-cell-button-corners" style="left: -20px;"></div>
+                                    <div class="project-cell-button-corners" style="right: -20px;"></div>
+                                    <a class="project-cell-button-text-frameIn" href="https://www.behance.net/gallery/141279759/UNDER-SIGHT-Digital-Publishing-Concept" target="_blank">Learn more about this case on <b>Behance</b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-spaces"></div>
+                <div class="project-cell-container">
+                    <div class="project-cell">
+                        <div class="project-circle"></div>
+                        <!-- <img class="project-background" src="assets/CSK_bgn.png"> -->
+                        <div class="project-cell-logo-container">
+                            <img class="project-cell-logo" src="assets/pics/projects/CSK_logo.svg">
+                        </div>
+                        <div class="project-cell-description-container">
+                            <div class="project-cell-title">CONSTRUCTIONS MATERIALS CENTER</div>
+                            <div class="project-text-spaces"></div>
+                            <div class="project-cell-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nisl nisi scelerisque eu ultrices vitae auctor eu augue. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus.</div>
+                            <div class="project-text-spaces"></div>
+                            <div class="project-text-spaces"></div>
+                            <div class="project-cell-button-container">
+                                <div class="project-cell-button" style="opacity: 1; background: none;">
+                                    <div class="project-cell-button-text-frameOut">Learn more about this case on <b>Behance</b></div>
+                                </div>
+                                <div class="project-cell-button">
+                                    <div class="project-cell-button-corners" style="left: -20px;"></div>
+                                    <div class="project-cell-button-corners" style="right: -20px;"></div>
+                                    <a class="project-cell-button-text-frameIn" href="https://www.behance.net/gallery/127811037/CSK-Constructions-Materials-Center" target="_blank">Learn more about this case on <b>Behance</b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-spaces"></div>
+                <div class="project-cell-container">
+                    <div class="project-cell">
+                        <div class="project-circle"></div>
+                        <!-- <img class="project-background" src="assets/CSK_bgn.png"> -->
+                        <div class="project-cell-logo-container">
+                            <img class="project-cell-logo" src="assets/pics/projects/placeholder_logo.svg">
+                        </div>
+                        <div class="project-cell-description-container">
+                            <div class="project-cell-title">PLACEHOLDER</div>
+                            <div class="project-text-spaces"></div>
+                            <div class="project-cell-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nisl nisi scelerisque eu ultrices vitae auctor eu augue. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus.</div>
+                            <div class="project-text-spaces"></div>
+                            <div class="project-text-spaces"></div>
+                            <div class="project-cell-button-container">
+                                <div class="project-cell-button" style="opacity: 1; background: none;">
+                                    <div class="project-cell-button-text-frameOut">Learn more about this case on <b>Behance</b></div>
+                                </div>
+                                <div class="project-cell-button">
+                                    <div class="project-cell-button-corners" style="left: -20px;"></div>
+                                    <div class="project-cell-button-corners" style="right: -20px;"></div>
+                                    <a class="project-cell-button-text-frameIn" href="" target="_blank">Learn more about this case on <b>Behance</b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-spaces"></div>
+                <div class="project-cell-container">
+                    <div class="project-cell">
+                        <div class="project-circle"></div>
+                        <!-- <img class="project-background" src="assets/CSK_bgn.png"> -->
+                        <div class="project-cell-logo-container">
+                            <img class="project-cell-logo" src="assets/pics/projects/placeholder_logo.svg">
+                        </div>
+                        <div class="project-cell-description-container">
+                            <div class="project-cell-title">PLACEHOLDER</div>
+                            <div class="project-text-spaces"></div>
+                            <div class="project-cell-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nisl nisi scelerisque eu ultrices vitae auctor eu augue. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus.</div>
+                            <div class="project-text-spaces"></div>
+                            <div class="project-text-spaces"></div>
+                            <div class="project-cell-button-container">
+                                <div class="project-cell-button" style="opacity: 1; background: none;">
+                                    <div class="project-cell-button-text-frameOut">Learn more about this case on <b>Behance</b></div>
+                                </div>
+                                <div class="project-cell-button">
+                                    <div class="project-cell-button-corners" style="left: -20px;"></div>
+                                    <div class="project-cell-button-corners" style="right: -20px;"></div>
+                                    <a class="project-cell-button-text-frameIn" href="" target="_blank">Learn more about this case on <b>Behance</b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-spaces"></div>
+            </div>
+        </div>
+        <div id="links" class="menus-container" style="height: 100%;" >
+            <div class="projects-scroll-area">
+                <div class="project-spaces" style="height: 120px;"></div>
+                <div class="menus-title">find me</div>
+                <div class="links-spaces"></div>
+                <div class="links-container" style="mix-blend-mode: hard-light;">
+                    <div class="links-cell">
+                        <a class="links-cell-grid" href="https://www.behance.net/viktornikitin" target="_blank">
+                            <div class="links-cell-grid-empty"></div>
+                            <div class="links-cell-grid-empty"></div>
+                            <div class="links-cell-grid-empty"></div>
+                            <img class="links-cell-grid-icon" src="assets/pics/links/behance_invert_icon.svg">
+                        </a>
+                        <div class="links-cell-back">
+                            <div class="links-cell-back-flare-container">
+                                <div class="links-cell-back-star">✦</div>
+                                <div class="links-cell-back-star" style="left: 100%;">✦</div>
+                                <div class="links-cell-back-flare"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="links-cell">
+                        <a class="links-cell-grid" href="https://www.linkedin.com/in/viktor-nikitinskiy-0315b6235" target="_blank">
+                            <div class="links-cell-grid-empty"></div>
+                            <div class="links-cell-grid-empty"></div>
+                            <div class="links-cell-grid-empty"></div>
+                            <img class="links-cell-grid-icon" src="assets/pics/links/linkedin_invert_icon.svg">
+                        </a>
+                        <div class="links-cell-back">
+                            <div class="links-cell-back-flare-container">
+                                <div class="links-cell-back-star">✦</div>
+                                <div class="links-cell-back-star" style="left: 100%;">✦</div>
+                                <div class="links-cell-back-flare"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="links-cell"></div>
+                </div>
+                <div class="links-spaces"></div>
+                <div class="menus-title">contact me</div>
+                <div class="links-spaces"></div>
+                <div class="links-container">
+                    <!-- <div class="links-cell">
+                        <div class="links-cell-blur-container">
+                            <div class="full-flare"></div>
+                            <img class="links-cell-light" src="assets/pics/links/element_icon.svg">
+                        </div>
+                        <div class="links-cell-logo-container">
+                            
+                            <img class="links-cell-logo" src="assets/pics/links/element_icon.svg">
+                        </div>
+                    </div> -->
+                    <div class="links-cell">
+                        <a class="links-cell-grid" href="mailto:nikitinskiy.viktor@gmail.com" target="_blank">
+                            <div class="links-cell-grid-empty"></div>
+                            <div class="links-cell-grid-empty"></div>
+                            <div class="links-cell-grid-empty"></div>
+                            <img class="links-cell-grid-icon" src="assets/pics/links/mail_invert_icon.svg">
+                        </a>
+                        <div class="links-cell-back">
+                            <div class="links-cell-back-flare-container">
+                                <div class="links-cell-back-star">✦</div>
+                                <div class="links-cell-back-star" style="left: 100%;">✦</div>
+                                <div class="links-cell-back-flare"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="links-cell">
+                        <a class="links-cell-grid" href="https://t.me/vitkarus" target="_blank">
+                            <div class="links-cell-grid-empty"></div>
+                            <div class="links-cell-grid-empty"></div>
+                            <div class="links-cell-grid-empty"></div>
+                            <img class="links-cell-grid-icon" src="assets/pics/links/telegram_invert_icon.svg">
+                        </a>
+                        <div class="links-cell-back">
+                            <div class="links-cell-back-flare-container">
+                                <div class="links-cell-back-star">✦</div>
+                                <div class="links-cell-back-star" style="left: 100%;">✦</div>
+                                <div class="links-cell-back-flare"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="links-cell">
+                        <div class="links-cell-grid">
+                            <div class="links-cell-grid-empty"></div>
+                            <div class="links-cell-grid-empty"></div>
+                            <div class="links-cell-grid-empty"></div>
+                            <img class="links-cell-grid-icon" src="assets/pics/links/element_invert_icon.svg">
+                        </div>
+                        <div class="links-cell-back">
+                            <div class="links-cell-back-flare-container">
+                                <div class="links-cell-back-star">✦</div>
+                                <div class="links-cell-back-star" style="left: 100%;">✦</div>
+                                <div class="links-cell-back-flare"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="links-spaces"></div>
+                <div class="project-spaces" style="height: 120px;"></div>
+            </div>
+            
+        </div>
+        <img class="logo" src="assets/my_logo.svg">
+        <div class="close-button-container">
+            <div class="close-button-frame"></div>
+            <div class="close-button">
+                <img src="assets/close.svg" alt="Close" onmouseup="stateMachine('menu')">
+            </div>
+        </div>
+        <!-- <div class="ST-area">
+            
+            <div class="ST-wrapper">
+                <div class="ST">about</div>
+            </div>
+            <div class="ST-wrapper">
+                <div class="ST">projects</div>
+            </div>
+            <div class="ST-wrapper">
+                <div class="ST">links</div>
+            </div>
+        </div> -->
+        <!-- <div class="ST-area">
+            <div class="ST-wrapper">
+                <div class="ST">about</div>
+            </div>
+            <div class="ST-wrapper">
+                <div class="ST">projects</div>
+            </div>
+            <div class="ST-wrapper">
+                <div class="ST">links</div>
+            </div>
+        </div> -->
+    </div>
+    <div class="overlay"></div>
+</body>
+</html>
+

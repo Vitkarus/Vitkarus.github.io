@@ -1,0 +1,91 @@
+.MP-menu
+{
+    position: absolute;
+    width: var(--main-pillar-size);
+    height: var(--main-pillar-size);
+    transform: rotateX(60deg) rotate(45deg);
+
+    transform-style: preserve-3d;
+
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+
+  transition: all 5s;
+}
+.MP-menu-layer 
+{
+  height: 100px;
+  width: 500px;
+  /* background: coral; */
+  position: relative;
+  opacity: 0;
+
+  z-index: var(--a);
+
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+
+    
+    animation: MP-menu-layer-anim  1s ease 1; 
+    animation-fill-mode: forwards;
+    animation-delay: calc(var(--main-pillar-anim-time) + var(--total-delay-time));
+}
+@keyframes MP-menu-layer-anim 
+{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.MP-menu-layer:hover > div
+{
+    transform: rotateX(70deg) rotate(405deg) scale(0);
+    -webkit-transform: rotateX(70deg) rotate(405deg) scale(0);
+}
+.MP-menu-layer:hover > div > div
+{
+    transition: all 5s;
+    opacity: 0;
+    filter: blur(50px);
+}
+
+.MP-menu-layer-splitter
+{
+    height: var(--main-pillar-segments-split);
+    width: 100px;
+    /* background: lightblue; */
+    position: relative;
+
+    animation-fill-mode: forwards;
+    animation: MP-menu-layer-splitter-anim 1s ease 1; 
+    animation-delay: 2.7s;
+}
+@keyframes MP-menu-layer-splitter-anim 
+{
+    0%{height: 0px;}
+    100%{height: var(--main-pillar-segments-split);}
+}
+
+.MP-menu-sides 
+{
+    position: absolute;
+    width: 100%;
+    height: var(--main-pillar-size);
+    background: var(--main-pillar-color);
+    transition: all 5s;
+}
+.MP-menu-top
+{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: var(--main-pillar-color);
+  transform: translate3d(0, 0, var(--main-pillar-size-half));
+  transition: all 5s;
+  border-radius: 15px;
+}
+.MP-menu-front {transform: translate3d(0, var(--main-pillar-size-half), 0) rotateX(-90deg);}
+.MP-menu-left {transform: rotateZ(90deg) translate3d(0, var(--main-pillar-size-half), 0) rotateX(-90deg);}
+.MP-menu-back {transform: rotateZ(180deg) translate3d(0, var(--main-pillar-size-half), 0) rotateX(-90deg);}
+.MP-menu-right {transform: rotateZ(270deg) translate3d(0, var(--main-pillar-size-half), 0) rotateX(-90deg);}
+

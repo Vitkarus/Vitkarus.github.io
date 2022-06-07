@@ -1,0 +1,115 @@
+.ST-area
+{
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    /* background: rgba(255, 0, 0, 0.485); */
+}
+.ST-wrapper
+{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    /* background: rgba(0, 0, 255, 0.48); */
+}
+.ST
+{
+    position: relative;
+    font-family: "Square721";
+    font-size: 34px;
+    color: rgba(255, 255, 255, 0.7); /* DAD7C8 65645c */
+    /* letter-spacing: 50px; */
+    left: 0;
+    /* background: black; */
+    cursor: pointer;
+    transition: all 1.5s;
+}
+.ST:active
+{
+    letter-spacing: -2px;
+    transition: all 0.5s;
+}
+.ST-link
+{
+    position: relative;
+    height: 2px;
+    flex-grow: 1;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7));
+    transform: translateY(4px);
+}
+.ST-textlink-container
+{
+    position: absolute;
+    right: 335px;
+    height: 100%;
+    width: 40%;
+    /* background: magenta; */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    transition: all 1.5s;
+}
+.ST-frame
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* background: rgba(255, 0, 0, 0.466); */
+    border-radius: 70px 70px 70px 0;
+    box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.7);
+    right: 60px;
+
+    transform: rotateX(65deg) rotate(45deg);
+}
+.ST-frame-mask
+{
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    /* overflow: hidden; */
+    z-index: 0;
+    pointer-events: none;
+}
+.ST-frame-container
+{
+    position: absolute;
+    right: -50px;
+    bottom: -5px;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+
+    transform: scaleX(80%);
+}
+
+/* ===== S C R A P S ===== */
+.ST-area-3D
+{
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    z-index: 120;
+    /* background: rgba(255, 0, 0, 0.485); */
+}
+.ST-wrapper-3D
+{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform: translateY(100px) rotateX(60deg) rotate(-49deg);
+    transform-style: preserve-3d;
+    /* background: rgba(0, 0, 255, 0.48); */
+}
+.ST-3D
+{
+    position: absolute;
+    font-family: "Square721";
+    font-size: 50px;
+    color: #65645c; /* DAD7C8 65645c */
+transform: translateY(150px) rotateX(-90deg) ;
+letter-spacing: 50px;
+}

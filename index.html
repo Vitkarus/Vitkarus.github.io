@@ -1,18 +1,20 @@
 <html>
+    <meta name="viewport" content="width=400px, initial-scale=1">
     <head>
-        <link rel="stylesheet" href="pyramide.css">
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="MP.css">
-        <link rel="stylesheet" href="MP-split.css">
-        <link rel="stylesheet" href="MP-titles.css">
         <link rel="stylesheet" href="ELC.css">
         <link rel="stylesheet" href="ELC-wrappers.css">
         <link rel="stylesheet" href="CT.css">
         <link rel="stylesheet" href="ST.css">
         <link rel="stylesheet" href="menus.css">
-        <link rel="stylesheet" href="about.css">
-        <link rel="stylesheet" href="projects.css">
-        <link rel="stylesheet" href="links.css">
+        <link rel="stylesheet" href="menu-about.css">
+        <link rel="stylesheet" href="menu-projects.css">
+        <link rel="stylesheet" href="menu-links.css">
+
+        <!-- <link rel="stylesheet" href="MP.css">
+        <link rel="stylesheet" href="MP-split.css">
+        <link rel="stylesheet" href="MP-titles.css">
+        <link rel="stylesheet" href="pyramide.css"> -->
         <script src="script.js"></script> 
     </head>
 <body onload="init()">
@@ -21,13 +23,16 @@
     </div>
     <!-- <div class="blend-wrapper-blur"></div> -->
     <div class="container">
-        <!-- <div id="CTarea" class="CT-area">
-            <div id="CT" class="CT"></div>
-        </div> -->
-        <!-- <div id="temp" style="color: blue">TEMP</div>
-        <div id="test" style="color: blue">TEST</div> -->
-        <div id="pillar" class="container-MP" style="mix-blend-mode: hard-light;"> <!--overlay, color-dodge, hard-light -->
-            <!-- <div class="ELC-big-divs"></div> -->
+        <div class="logo-and-button-container" style="height: 100%;">
+            <img class="logo" src="assets/my_logo.svg">
+            <div class="close-button-container">
+                <div class="close-button-frame"></div>
+                <div class="close-button">
+                    <img src="assets/close.svg" alt="Close" onmouseup="stateMachine('menu')">
+                </div>
+            </div>
+        </div>
+        <div id="pillar" class="ELC-pillar">
             <div class="ELC-margins"></div>
             <div class="ELC-offset" style="--z:1; --s:1">
                 <div class="ST-textlink-container">
@@ -194,9 +199,7 @@
                 </div>
             </div>
             <div class="ELC-margins"></div>
-            <!-- <div class="ELC-big-divs"></div> -->
         </div>
-        <!-- <div style="position: absolute; top: 0; left: 0; height: 100px; width: 100px; background: yellow; z-index: 200;" onmousedown="stateMachine('menu')">CLOSE BUTTON</div> -->
         <div id="about" class="menus-container" style="height: 100%;">
             <div class="menus-title">about</div>
             <div class="about-frame-container">
@@ -429,13 +432,7 @@
             </div>
             
         </div>
-        <img class="logo" src="assets/my_logo.svg">
-        <div class="close-button-container">
-            <div class="close-button-frame"></div>
-            <div class="close-button">
-                <img src="assets/close.svg" alt="Close" onmouseup="stateMachine('menu')">
-            </div>
-        </div>
+        
         <!-- <div class="ST-area">
             
             <div class="ST-wrapper">
@@ -460,7 +457,7 @@
             </div>
         </div> -->
     </div>
-    <!-- <div class="overlay"></div> -->
+    <div class="overlay"></div>
 </body>
 </html>
 

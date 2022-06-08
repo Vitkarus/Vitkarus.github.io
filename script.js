@@ -11,7 +11,7 @@ function init()
     // measureEdgelessCube(0, 0, 0);
     // measurePyramide();
     trackCT();
-    fillBackground();
+    // fillBackground();
     createELCs();
     arrangeELCs();
     scrollToProject(0);
@@ -31,13 +31,10 @@ function trackCT()
 function fillBackground()
 {
     var segmentCode = document.getElementById('background').innerHTML;
-    console.log('nu i');
     var step;
     for (step = 0; step < 10000; step++) 
     {
-        console.log(step);
         document.getElementById('background').insertAdjacentHTML('afterbegin', segmentCode); 
-        
     }
 }
 
@@ -199,7 +196,7 @@ function stateMachine(state)
         for (step = (1 - segmentsAmount); step < (segmentsAmount - 1); step++) {document.getElementById('ELCwrapper' + step).parentElement.style.transform = 'translateX(0px)';}
     }
 
-    function moveToRight(){document.documentElement.style.setProperty('--ELC-offset-width-global', "84vw");}
+    function moveToRight(){document.documentElement.style.setProperty('--ELC-offset-width-global', "83%");}
 }
 
 function menu(action)
@@ -324,7 +321,6 @@ function arrangeELCs()
         i++;
         j = j - 3;
     }
-    document.getElementById('temp').innerHTML = segmentsHalf;
 }
 
 // ===== Н А К Л О Н = E L C =====
@@ -427,7 +423,7 @@ function stopReflectLight(id)
         // stopTiltELC(id);
 }
 
-// ===== С Т А Р Ы Е =====
+// ===== S C R A P S =====
 
 function buildMainPillar()
 {

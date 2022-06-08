@@ -1,5 +1,15 @@
 :root
 {
+
+  /* ===== S I Z E S ===== */
+
+  --max-webpage-width: 1920px;
+  --max-menus-width: 1280px;
+
+  --min-webpage-width: 480px;
+
+  /* ===== P I L L A R ===== */
+
     --ELC-length-global: 200px;
     --ELC-border-radius-global: 35px;
     --ELC-height-global: 13px;
@@ -41,7 +51,7 @@
 
     /* === Original === */
 
-    /* --main-color: #5C5C5C;
+    --main-color: #5C5C5C;
     --overlay-color: none;
 
     --ELC-glass-color1: rgb(184, 184, 184);
@@ -59,11 +69,11 @@
     --shadow-color1: rgba(0, 0, 0, 0.01);
     --shadow-color2: rgba(0, 0, 0, 0.15); 
     --shadow-color3: rgba(0, 0, 0, 0.4); 
-    --shadow-color4: rgba(0, 0, 0, 0.6);  */
+    --shadow-color4: rgba(0, 0, 0, 0.6); 
 
     /* === Dark red === */
 
-    --main-color: #ffffff;
+    /* --main-color: #ffffff;
     --overlay-color: #D25F57;
     --overlay-blend-mode: lighten;
 
@@ -82,7 +92,7 @@
     --shadow-color1: rgba(0, 0, 0, 0.01);
     --shadow-color2: rgba(0, 0, 0, 0.15); 
     --shadow-color3: rgba(0, 0, 0, 0.4); 
-    --shadow-color4: rgba(0, 0, 0, 0.6); 
+    --shadow-color4: rgba(0, 0, 0, 0.6);  */
 
     /* ===== S C R A P S ===== */
 
@@ -136,6 +146,7 @@ body
   position: absolute;
   height: 100%;
   width: 100%;
+  max-width: var(--max-webpage-width);
   overflow: hidden;
 
   display: flex;
@@ -153,8 +164,8 @@ body
 .background
 {
     position: absolute;
-  height: 105%;
-  width: 105%;
+  height: 100%;
+  width: 100%;
   background: var(--background-color-dark);
 
   z-index: -50;

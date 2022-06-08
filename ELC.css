@@ -1,3 +1,17 @@
+.ELC-pillar
+{
+  position: absolute;
+  width: 100%;
+  /* max-width: 1440px; */
+  overflow: hidden;
+
+  mix-blend-mode: hard-light; /* overlay, color-dodge, hard-light */
+
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center; 
+}
 .ELC-offset
 {
     position: relative;

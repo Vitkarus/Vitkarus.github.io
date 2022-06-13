@@ -15,6 +15,11 @@
     width: 100%;
     
 }
+.limiter
+{
+    opacity: 0;
+    pointer-events: none;
+}
 .menus-container
 {
     left: 0;
@@ -24,9 +29,7 @@
     flex-direction: column;
     justify-content: center; 
 
-    transition: all 1.5s;
-
-    pointer-events: none;
+    transition: all 0s;
 
     -webkit-mask: 
     radial-gradient(circle at top left, rgba(0, 0, 0, 0) 120px, rgba(0, 0, 0, 1) 150px) top,

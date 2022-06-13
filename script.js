@@ -17,6 +17,8 @@ function init()
     switchItems('hide', 'about');
     switchItems('hide', 'links');
     switchItems('hide', 'projects');
+    setTimeout(removeLimiter, 3000);
+    stateMachine('intro')
     scrollToProject(0);
 } 
 
@@ -41,12 +43,37 @@ function fillBackground()
     }
 }
 
+function removeLimiter()
+{
+    document.getElementById('about').classList.remove('limiter');
+    document.getElementById('projects').classList.remove('limiter');
+    document.getElementById('links').classList.remove('limiter');
+}
+
 function stateMachine(state)
 {
     let margin = document.getElementById('pillar').getElementsByClassName("ELC-margins");
     let offsets = document.getElementById('pillar').getElementsByClassName("ELC-offset");
     var temp1;
     var variable;
+
+    if (state == 'intro')
+    {
+        pillarState = 'intro';
+
+        for (temp1 = 0; temp1 < segmentsAmount*2; temp1++) 
+        {
+            setTimeout(applyMenuVariables, temp1*50 , temp1);
+            // setTimeout(applyMenuVariables, temp1*100 , segmentsAmount - 1 + temp1);
+        }
+
+        function applyMenuVariables(id)
+        {
+            offsets[id].style.setProperty('--ELC-length-global', "200px");
+            offsets[id].style.setProperty('--ELC-border-radius-global', "35px");
+            offsets[id].style.setProperty('--ELC-height-global', "13px");
+        }
+    }
 
     if (state == 'menu')
     {
@@ -336,18 +363,23 @@ function menu(action)
         frames[4].style.opacity = 0;
         frames[5].style.opacity = 0;
 
-        frames[0].style.filter = 'blur(10px)';
-        frames[1].style.filter = 'blur(10px)';
-        frames[2].style.filter = 'blur(10px)';
-        frames[3].style.filter = 'blur(10px)';
-        frames[4].style.filter = 'blur(10px)';
-        frames[5].style.filter = 'blur(10px)';
+        // frames[0].style.filter = 'blur(10px)';
+        // frames[1].style.filter = 'blur(10px)';
+        // frames[2].style.filter = 'blur(10px)';
+        // frames[3].style.filter = 'blur(10px)';
+        // frames[4].style.filter = 'blur(10px)';
+        // frames[5].style.filter = 'blur(10px)';
     }
 }
 function switchItems(action, type)
 {
     let items;
-    if (type == 'about'){items = document.getElementById('about').children;}
+    if (type == 'about')
+    {
+        items = document.getElementById('about').children;
+        if (action == 'show'){document.getElementById('about').style.pointerEvents = 'all'}
+        if (action == 'hide'){document.getElementById('about').style.pointerEvents = 'none'}
+    }
     if (type == 'projects')
     {
         items = document.getElementById('projects-scroll-area').children;

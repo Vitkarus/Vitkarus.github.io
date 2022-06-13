@@ -1,5 +1,5 @@
 <html>
-    <meta name="viewport" content="width=400px, initial-scale=1">
+    <meta name="viewport" content="width=400px, initial-scale=0.5">
     <head>
         <link rel="stylesheet" href="global-variables.css">
         <link rel="stylesheet" href="style.css">
@@ -44,7 +44,7 @@
                         <span class="intro-main-text">meet </span>
                         <span class="intro-main-text">you.</span>
                     </div>
-                    <div class="intro-secondary-text">I'm Viktor Nikitinskiy, graphic designer <br> and this is my site</div>
+                    <!-- <div class="intro-secondary-text">I'm Viktor Nikitinskiy, graphic designer <br> and this is my site</div> -->
                 </div>
                 <div class="intro-menu-space"></div>
             </div>
@@ -53,7 +53,17 @@
                 <div class="ST" onmouseover="activateMenu('aboutText', 'menu')" onmouseout="deactivateMenu('aboutText', 'menu')" onmouseup="stateMachine('about')">a b o u t</div>
             </div>
             <div class="ELC-offset" style="--z:1; --s:1">
-                
+                <!-- <div class="ST-frame-box">
+                    <div class="ST-frame-container">
+                        <div class="ST-angle-mask">
+                            <div class="ST-frame"></div>
+                        </div>
+                        <div class="ST-frame-mask">
+                            <div class="ST-frame"></div>
+                        </div>  
+                        <div class="ST-link"></div> 
+                    </div>
+                </div> -->
                 <div class="ST-frame-box">
                     <div class="ST-frame-container">
                         <div class="ST-angle-mask">
@@ -245,7 +255,7 @@
             </div>
             <div class="ELC-margins"></div>
         </div>
-        <div id="about" class="menus-container">
+        <div id="about" class="menus-container limiter">
             <div class="about-spaces menus-hidden-item"></div>
             <div class="menus-title menus-hidden-item">about</div>
             <div class="about-frame-container menus-hidden-item">
@@ -261,7 +271,7 @@
             </div>
             <div class="about-spaces menus-hidden-item"></div>
         </div>
-        <div id="projects" class="menus-container">
+        <div id="projects" class="menus-container limiter">
             <div id="projects-scroll-area" class="projects-scroll-area">
                 <div class="project-spaces" style="height: 150px;"></div>
                 <div class="menus-title">projects</div>
@@ -376,7 +386,7 @@
                 <div class="project-spaces"></div>
             </div>
         </div>
-        <div id="links" class="menus-container" style="height: 100%;">
+        <div id="links" class="menus-container limiter" style="height: 100%;">
             <div id="links-scroll-area" class="projects-scroll-area">
                 <div class="project-spaces" style="height: 120px;"></div>
                 <div class="menus-title">find me</div>

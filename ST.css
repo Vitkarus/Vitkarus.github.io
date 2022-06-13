@@ -1,8 +1,10 @@
 .ST-hidden
 {
-    
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-50px);
 }
-.ST-hidden > div > div > .ST-link
+.ST-hidden > div > .ST-link
 {
     width: 1000%;
 }

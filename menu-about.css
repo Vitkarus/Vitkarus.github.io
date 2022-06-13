@@ -10,6 +10,12 @@
     align-items: left;
     justify-content: center; 
 }
+.about-spaces
+{
+    position: relative;
+    height: 200px;
+    width: 100%;
+}
 .about-frame-corners
 {
     position: absolute;
@@ -25,7 +31,8 @@
 {
     position: relative;
     height: fit-content;
-    width: auto;
+    width: 100%;
+    max-width: 600px;
     margin-left: var(--frame-padding);
     margin-right: var(--frame-padding);
 
@@ -52,3 +59,5 @@
     height: var(--frame-padding);
     width: 100%;
 }
+
+/* ===== К Р У Т И Л К А =====  */

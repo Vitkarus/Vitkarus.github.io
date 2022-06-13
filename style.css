@@ -1,117 +1,3 @@
-:root
-{
-
-  /* ===== S I Z E S ===== */
-
-  --max-webpage-width: 1920px;
-  --max-menus-width: 1280px;
-
-  --min-webpage-width: 480px;
-
-  /* ===== P I L L A R ===== */
-
-    --ELC-length-global: 200px;
-    --ELC-border-radius-global: 35px;
-    --ELC-height-global: 13px;
-    --ELC-margins-global: 20px;
-
-    --ELC-offset-height-global: 55px;
-    --ELC-offset-step-global: 2px;
-    --ELC-offset-width-global: 66%;
-
-    --ELC-length-step-global: 6px;
-    --ELC-border-radius-step-global: 1px;
-    --ELC-height-step-global: 2px;
-
-    /* ===== P R O J E C T S ===== */
-
-    --between-description-margin: 10px;
-    --width-unit: 250px;
-    --logo-size: 350px;
-    --circle-size: 650px;
-    --logo-size-half: calc(var(--logo-size)/2);
-    --circle-size-half: calc(var(--circle-size)/2);
-
-    /* ===== L I N K S ===== */
-
-    --links-cell-height: 120px;
-  --links-cell-width: 160px;
-  --lenks-cell-logo-size: 77px;
-  --links-cell-border-radius: 20px;
-  --links-cell-gap: 30px;
-
-    /* ===== M E N U S ===== */
-
-    --frame-margin: 35px;
-    --frame-padding: 35px;
-    --close-button-size: 45px;
-    --font-size: 17px;
-
-    /* ===== C O L O R = S C H E M E S ===== */
-
-    /* === Original === */
-
-    --main-color: #5C5C5C;
-    --overlay-color: none;
-
-    --ELC-glass-color1: rgb(184, 184, 184);
-    --ELC-glass-color2: rgb(125, 125, 125);
-    --ELC-glov-color1: #ff7f50;
-    --ELC-glov-color2: rgb(133, 244, 233);
-
-    --filter-light-color: invert(96%) sepia(15%) saturate(172%) hue-rotate(355deg) brightness(93%) contrast(87%);
-    --filter-dark-color: invert(37%) sepia(1%) saturate(0%) hue-rotate(167deg) brightness(95%) contrast(94%);
-    --filter-glov-color1: invert(72%) sepia(48%) saturate(4114%) hue-rotate(326deg) brightness(101%) contrast(101%);
-
-    --background-color-light: #CBC6AE;
-    --background-color-dark: #C6C1A9; 
-
-    --shadow-color1: rgba(0, 0, 0, 0.01);
-    --shadow-color2: rgba(0, 0, 0, 0.15); 
-    --shadow-color3: rgba(0, 0, 0, 0.4); 
-    --shadow-color4: rgba(0, 0, 0, 0.6); 
-
-    /* === Dark red === */
-
-    /* --main-color: #ffffff;
-    --overlay-color: #D25F57;
-    --overlay-blend-mode: lighten;
-
-    --ELC-glass-color1: rgb(184, 184, 184);
-    --ELC-glass-color2: rgb(125, 125, 125);
-    --ELC-glov-color1: #ff7f50;
-    --ELC-glov-color2: rgb(133, 244, 233);
-
-    --filter-light-color: invert(96%) sepia(15%) saturate(172%) hue-rotate(355deg) brightness(93%) contrast(87%);
-    --filter-dark-color: invert(37%) sepia(1%) saturate(0%) hue-rotate(167deg) brightness(95%) contrast(94%);
-    --filter-glov-color1: invert(72%) sepia(48%) saturate(4114%) hue-rotate(326deg) brightness(101%) contrast(101%);
-
-    --background-color-light: #DCD7C5;
-    --background-color-dark: #DAD4C2; 
-
-    --shadow-color1: rgba(0, 0, 0, 0.01);
-    --shadow-color2: rgba(0, 0, 0, 0.15); 
-    --shadow-color3: rgba(0, 0, 0, 0.4); 
-    --shadow-color4: rgba(0, 0, 0, 0.6);  */
-
-    /* ===== S C R A P S ===== */
-
-    --main-pillar-size: 130px;
-    --main-pillar-size-half: calc(var(--main-pillar-size)/2);
-    --main-pillar-anim-time: 2s;
-    --main-pillar-color: white;
-
-    --main-pillar-segments-amount: 25;
-    --main-pillar-segments-amount-half: calc(var(--main-pillar-segments-amount)/2);
-    --main-pillar-segments-amount-twice: calc(var(--main-pillar-segments-amount)*1.5);
-    --main-pillar-segments-margin: calc(100vh / var(--main-pillar-segments-amount-twice)); /* 85px */
-    --main-pillar-segments-split: 70px;
-
-    --total-delay-time: calc(0.05s * var(--main-pillar-segments-amount));
-
-    --rounded-size: 100px;
-    --rounded-boreder-radius: 14px;
-}
 * 
 {
   margin: 0;
@@ -147,7 +33,8 @@ body
   height: 100%;
   width: 100%;
   max-width: var(--max-webpage-width);
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
 
   display: flex;
   align-items: center;

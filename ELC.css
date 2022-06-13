@@ -3,14 +3,19 @@
   position: absolute;
   width: 100%;
   /* max-width: 1440px; */
-  overflow: hidden;
+  overflow: visible;
 
-  mix-blend-mode: hard-light; /* overlay, color-dodge, hard-light */
+  /* mix-blend-mode: hard-light;  */
+  /* overlay, color-dodge, hard-light */
 
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: center; 
+
+  transform: translateY(var(--ELC-transformY-global));
+
+  transition: all 1s;
 }
 .ELC-offset
 {
@@ -20,11 +25,10 @@
     /* width: calc(50% + var(--s) * 10px); */
     width: var(--ELC-offset-width-global);
     left: 0;
-    /* background: white; */
     z-index: var(--z);
     transform: translateX(0);
 
-    transition: all 1.5s;
+    transition: all var(--ELC-anim-speed2);
 }
 .ELC-wrapper-0, .ELC-wrapper-1, .ELC-wrapper-next
 {
@@ -52,68 +56,65 @@
 
     perspective: 1500px;
 
-    transform: rotateZ(0deg);
-
     cursor: pointer;
 
-    transition: all 1.5s;
-
+    transition: all var(--ELC-anim-speed2);
 }
 .ELC-container > div, .ELC-container > div > div, .ELC-container > div > div > div
 {
-    transition: all 1.5s;
+    transition: all var(--ELC-anim-speed2);
 }
 
-/* Нативный ховер */
+/* === Нативный ховер === */
 .ELC-container:hover > div > div
 {
-    transition: all 0.5s;
+    transition: all var(--ELC-anim-speed1);
     background: var(--ELC-glov-color1);
 }
 .ELC-container:hover > div > div > div
 {
-    transition: all 0.5s;
+    transition: all var(--ELC-anim-speed1);
     opacity: 0;
 }
 .ELC-container:hover .ELC-lightning-background
 {
-    transition: all 0.5s;
+    transition: all var(--ELC-anim-speed1);
     opacity: 1;
 }
 .ELC-container:hover .ELC-lightning-flare
 {
-    transition: all 0.5s;
+    transition: all var(--ELC-anim-speed1);
     opacity: 1;
 }
 .ELC-container:hover > div > .ELC-texture
 {
-    transition: all 0.5s;
+    transition: all var(--ELC-anim-speed1);
     opacity: 0;
 }
-/* Ховер для js */
+/* === Ховер для js === */
 .ELC-container-hover > div > div
 {
-    transition: all 0.5s;
+    transition: all var(--ELC-anim-speed2);
     background: var(--ELC-glov-color1);
 }
 .ELC-container-hover > div > div > div
 {
-    transition: all 0.5s;
+    transition: all var(--ELC-anim-speed1);
     opacity: 0;
 }
 .ELC-container-hover .ELC-lightning-background
 {
-    transition: all 0.5s;
+    transition: all var(--ELC-anim-speed1);
     opacity: 1;
 }
 .ELC-container-hover .ELC-lightning-flare
 {
-    transition: all 0.5s;
+    transition: all var(--ELC-anim-speed1);
     opacity: 1;
 }
 .ELC-container-hover > div > .ELC-texture
 {
-    transition: all 0.5s;
+    transition: all var(--ELC-anim-speed1);
     opacity: 0;
 }
 
@@ -230,7 +231,6 @@
     height: 200%;
     width: calc(var(--ELC-width) * 1);
     
-
     transform: rotateX(0deg) rotate(-45deg);
 
     display: flex;
@@ -312,17 +312,11 @@
     opacity: 0;
 }
 
-
 /* ===== E T C ===== */
-.ELC-big-divs
-{
-    position: relative;
-    height: 100%;
-}
 .ELC-margins
 {
     position: relative;
     height: var(--ELC-margins-global);
     pointer-events: none;
-    transition: all 1.5s;
+    transition: all var(--ELC-anim-speed2);
 }

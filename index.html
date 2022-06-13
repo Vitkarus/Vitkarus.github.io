@@ -1,11 +1,13 @@
 <html>
     <meta name="viewport" content="width=400px, initial-scale=1">
     <head>
+        <link rel="stylesheet" href="global-variables.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="ELC.css">
         <link rel="stylesheet" href="ELC-wrappers.css">
         <link rel="stylesheet" href="CT.css">
         <link rel="stylesheet" href="ST.css">
+        <link rel="stylesheet" href="intro.css">
         <link rel="stylesheet" href="menus.css">
         <link rel="stylesheet" href="menu-about.css">
         <link rel="stylesheet" href="menu-projects.css">
@@ -32,22 +34,47 @@
                 </div>
             </div>
         </div>
+        
         <div id="pillar" class="ELC-pillar">
-            <div class="ELC-margins"></div>
-            <div class="ELC-offset" style="--z:1; --s:1">
-                <div class="ST-textlink-container">
-                    <div class="ST" onmouseover="activateMenu('aboutText', 'menu')" onmouseout="deactivateMenu('aboutText', 'menu')" onmouseup="stateMachine('about')">a b o u t</div>
-                    <div class="ST-link"></div>
+            <div class="intro-container" id="intro">
+                <div class="intro-text-wrapper">
+                    <div class="intro-main-text-wrapper">
+                        <span class="intro-main-text">nice </span>
+                        <span class="intro-main-text">to </span>
+                        <span class="intro-main-text">meet </span>
+                        <span class="intro-main-text">you.</span>
+                    </div>
+                    <div class="intro-secondary-text">I'm Viktor Nikitinskiy, graphic designer <br> and this is my site</div>
                 </div>
-                <div class="ST-frame-container">
-                    <div class="ST-frame-mask">
-                        <div class="ST-frame"></div>
+                <div class="intro-menu-space"></div>
+            </div>
+            <div class="ELC-margins"></div>
+            <div class="ST-textlink-container">
+                <div class="ST" onmouseover="activateMenu('aboutText', 'menu')" onmouseout="deactivateMenu('aboutText', 'menu')" onmouseup="stateMachine('about')">a b o u t</div>
+            </div>
+            <div class="ELC-offset" style="--z:1; --s:1">
+                
+                <div class="ST-frame-box">
+                    <div class="ST-frame-container">
+                        <div class="ST-angle-mask">
+                            <div class="ST-frame"></div>
+                        </div>
+                        <div class="ST-frame-mask">
+                            <div class="ST-frame"></div>
+                        </div>   
+                    </div>
+                </div>
+                <div class="ST-frame-box">
+                    <div class="ST-frame-container">
+                        <div class="ST-link"></div>
                     </div>
                 </div>
                 <div id="ELCwrapper1" class="ELC-wrapper-1">
                     <div id="ELCcontainer1" class="ELC-container" onmouseover="startReflectLight(1)" onmouseout="stopReflectLight(1)">
                         <div class="ELC-lightning-background"></div>
                         <div class="ELC-lightning-flare"></div>
+                        <!-- <div class="ELC-top" style="transform: translateY(-50%) rotateX(60deg) rotateZ(45deg) rotateY(90deg);"></div>
+                        <div class="ELC-top" style="transform: translateY(-50%) rotateX(60deg) rotateZ(-45deg) rotateY(90deg);"></div> -->
                         <div class="ELC-top">
                             <div class="ELC-lightning-top">
                                 <div class="ELC-lightning-top-empty"></div>
@@ -89,14 +116,23 @@
                 </div>
             </div>
             <div class="ELC-margins"></div>
+            <div class="ST-textlink-container">
+                <div class="ST" onmouseover="activateMenu('projectsText', 'menu')" onmouseout="deactivateMenu('projectsText', 'menu')" onmouseup="stateMachine('projects')">p r o j e c t s </div>
+            </div>
             <div class="ELC-offset" style="--z:0; --s:0">
-                <div class="ST-textlink-container">
-                    <div class="ST" onmouseover="activateMenu('projectsText', 'menu')" onmouseout="deactivateMenu('projectsText', 'menu')" onmouseup="stateMachine('projects')">p r o j e c t s </div>
-                    <div class="ST-link"></div>
+                <div class="ST-frame-box">
+                    <div class="ST-frame-container">
+                        <div class="ST-angle-mask">
+                            <div class="ST-frame"></div>
+                        </div>
+                        <div class="ST-frame-mask">
+                            <div class="ST-frame"></div>
+                        </div>   
+                    </div>
                 </div>
-                <div class="ST-frame-container">
-                    <div class="ST-frame-mask">
-                        <div class="ST-frame"></div>
+                <div class="ST-frame-box">
+                    <div class="ST-frame-container">
+                        <div class="ST-link"></div>
                     </div>
                 </div>
                 <div id="ELCwrapper0" class="ELC-wrapper-0">
@@ -144,14 +180,23 @@
                 </div>
             </div>
             <div class="ELC-margins"></div>
+            <div class="ST-textlink-container">
+                <div class="ST" onmouseover="activateMenu('linksText', 'menu')" onmouseout="deactivateMenu('linksText', 'menu')" onmouseup="stateMachine('links')">l i n k s</div>
+            </div>
             <div class="ELC-offset" style="--z:-1; --s:1">
-                <div class="ST-textlink-container">
-                    <div class="ST" onmouseover="activateMenu('linksText', 'menu')" onmouseout="deactivateMenu('linksText', 'menu')" onmouseup="stateMachine('links')">l i n k s</div>
-                    <div class="ST-link"></div>
+                <div class="ST-frame-box">
+                    <div class="ST-frame-container">
+                        <div class="ST-angle-mask">
+                            <div class="ST-frame"></div>
+                        </div>
+                        <div class="ST-frame-mask">
+                            <div class="ST-frame"></div>
+                        </div>   
+                    </div>
                 </div>
-                <div class="ST-frame-container">
-                    <div class="ST-frame-mask">
-                        <div class="ST-frame"></div>
+                <div class="ST-frame-box">
+                    <div class="ST-frame-container">
+                        <div class="ST-link"></div>
                     </div>
                 </div>
                 <div id="ELCwrapper-1" class="ELC-wrapper-1">
@@ -201,21 +246,23 @@
             <div class="ELC-margins"></div>
         </div>
         <div id="about" class="menus-container">
-            <div class="menus-title">about</div>
-            <div class="about-frame-container">
-                <div class="about-frame-corners" style="top: 0; left: 0;"></div>
+            <div class="about-spaces menus-hidden-item"></div>
+            <div class="menus-title menus-hidden-item">about</div>
+            <div class="about-frame-container menus-hidden-item">
+                <!-- <div class="about-frame-corners" style="top: 0; left: 0;"></div> -->
                 <!-- <div class="about-frame-corners" style="top: 0; left: 100%; transform: rotate(90deg);"></div> -->
                 <!-- <div class="about-frame-corners" style="top: 100%; left: 0; transform: rotate(-90deg);"></div> -->
-                <div class="about-frame-corners" style="top: 100%; left: 100%; transform: rotate(180deg);"></div>
+                <!-- <div class="about-frame-corners" style="top: 100%; left: 100%; transform: rotate(180deg);"></div> -->
                 <div class="about-text-container">
                     <div class="about-text-empty"></div>
                     <div class="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nisl nisi scelerisque eu ultrices vitae auctor eu augue. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Quisque egestas diam in arcu cursus euismod quis. Enim tortor at auctor urna nunc id cursus.</div>
                     <div class="about-text-empty"></div>
                 </div>
             </div>
+            <div class="about-spaces menus-hidden-item"></div>
         </div>
         <div id="projects" class="menus-container">
-            <div class="projects-scroll-area">
+            <div id="projects-scroll-area" class="projects-scroll-area">
                 <div class="project-spaces" style="height: 150px;"></div>
                 <div class="menus-title">projects</div>
                 <div class="project-spaces" style="height: 150px;"></div>
@@ -329,8 +376,8 @@
                 <div class="project-spaces"></div>
             </div>
         </div>
-        <div id="links" class="menus-container" style="height: 100%;" >
-            <div class="projects-scroll-area">
+        <div id="links" class="menus-container" style="height: 100%;">
+            <div id="links-scroll-area" class="projects-scroll-area">
                 <div class="project-spaces" style="height: 120px;"></div>
                 <div class="menus-title">find me</div>
                 <div class="links-spaces"></div>

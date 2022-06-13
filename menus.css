@@ -1,3 +1,11 @@
+.menus-hidden-item
+{
+    transition: all 1s;
+    opacity: 0;
+    transform: translateX(-30px);
+    filter: blur(10px);
+    pointer-events: none;
+}
 
 .menus-container, .logo-and-button-container
 {
@@ -12,20 +20,27 @@
     left: 0;
     max-width: var(--max-menus-width);
 
-    opacity: 0;
-    pointer-events: none;
-
     display: flex;
     flex-direction: column;
     justify-content: center; 
 
     transition: all 1.5s;
 
+    pointer-events: none;
+
     -webkit-mask: 
     radial-gradient(circle at top left, rgba(0, 0, 0, 0) 120px, rgba(0, 0, 0, 1) 150px) top,
     radial-gradient(circle at bottom left, rgba(0, 0, 0, 0) 120px, rgba(0, 0, 0, 1) 150px) bottom;
     -webkit-mask-size:100% 51%; /* each one half the size */
     -webkit-mask-repeat:no-repeat; /* don't forget this */
+}
+.menus-container > div
+{
+    transition: all 1s;
+}
+.menus-container > div > div
+{
+    transition: all 1s;
 }
 .logo-and-button-container
 {
@@ -36,6 +51,7 @@
     position: relative;
     font-family: "Square721";
     font-size: 70px;
+    text-align: left;
     /* margin-bottom: calc(var(--frame-padding) * 1.2); */
     margin-left: var(--frame-padding);
     color: var(--main-color); /* DAD7C8 65645c */

@@ -32,6 +32,10 @@
   z-index: 100;
   transition: all 0.3s;
 }
+/* #links-scroll-area > div
+{
+  transition: all 1s;
+} */
 
 /* ===== Л О Г О ===== */
 .links-cell-grid

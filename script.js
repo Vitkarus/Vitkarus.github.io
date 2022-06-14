@@ -10,7 +10,7 @@ function init()
     // buildSplittedPillar();
     // measureEdgelessCube(0, 0, 0);
     // measurePyramide();
-    trackCT();
+    // trackCT();
     fillBackground();
     createELCs();
     arrangeELCs();
@@ -122,6 +122,7 @@ function stateMachine(state)
 
         setTimeout(menu, 1000, 'show');
         reshapeSphere('colapse');
+        reshapeWaves('colapse')
         setTimeout(switchItems, 0, 'hide', 'about');
         setTimeout(switchItems, 0, 'hide', 'links');
         setTimeout(switchItems, 0, 'hide', 'projects');
@@ -275,6 +276,7 @@ function stateMachine(state)
         // setTimeout(moveToRight, 0);
         // moveToRight();
         menu('hide');
+        reshapeWaves('expand');
         switchItems('show', 'links');
     }
 
@@ -315,6 +317,23 @@ function reshapeSphere(action)
                 tops[step].removeAttribute('style');
             }
         }
+}
+
+function reshapeWaves(action)
+{
+    let waves = document.getElementById('waves').getElementsByClassName("links-wave-mask");
+    console.log('blahaha');
+
+    if (action == 'expand'){for (var i = 0; i < 4; i++){setTimeout(showWaves, i*300, i);}}
+    if (action == 'colapse'){for (var i = 0; i < 4; i++){setTimeout(hideWaves, i*300, i);}}
+
+    function showWaves(i)
+    {
+        waves[i].style.opacity = 1;
+        waves[i].style.height = (i+1)*600 + "px";
+        waves[i].style.width = (i+1)*600 + "px";
+    }
+    function hideWaves(i){waves[i].removeAttribute('style');}
 }
 
 function menu(action)

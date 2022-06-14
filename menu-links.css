@@ -144,6 +144,52 @@
   /* filter: blur(5px); */
 }
 
+/* ===== W A V E S ===== */
+.links-waves-container
+{
+  position: absolute;
+
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+
+  perspective: 1500px;
+  transform:rotateX(60deg);
+}
+.links-wave-mask
+{
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  opacity: 0;
+ 
+  transform-origin: center;
+
+  -webkit-mask: 
+  radial-gradient(circle at top, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1) 100%) top,
+  radial-gradient(circle at bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1) 100%) bottom;
+    -webkit-mask-size:100% 51%; 
+    -webkit-mask-repeat:no-repeat; 
+    
+    animation: rotate-wave 50s infinite;
+}
+.links-wave
+{
+  position: absolute;
+  margin: 5%;
+  height: 90%;
+  width: 90%;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 1); 
+}
+
+@keyframes rotate-wave 
+{
+  from {transform: rotate(0);}
+  to {transform: rotate(360deg);}
+ /* 100% {transform: rotate(0);} */
+}
+
 /* ===== S C R A P S ===== */
 .links-cell-logo-container, .links-cell-blur-container
 {

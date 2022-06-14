@@ -18,7 +18,7 @@ function init()
     switchItems('hide', 'links');
     switchItems('hide', 'projects');
     setTimeout(removeLimiter, 3000);
-    stateMachine('intro')
+    stateMachine('intro');
     scrollToProject(0);
 } 
 
@@ -126,6 +126,7 @@ function stateMachine(state)
         setTimeout(switchItems, 0, 'hide', 'about');
         setTimeout(switchItems, 0, 'hide', 'links');
         setTimeout(switchItems, 0, 'hide', 'projects');
+        changeIntro();
         arrangeELCs();
     }
     if (state == 'about')
@@ -324,14 +325,15 @@ function reshapeWaves(action)
     let waves = document.getElementById('waves').getElementsByClassName("links-wave-mask");
     console.log('blahaha');
 
-    if (action == 'expand'){for (var i = 0; i < 4; i++){setTimeout(showWaves, i*300, i);}}
-    if (action == 'colapse'){for (var i = 0; i < 4; i++){setTimeout(hideWaves, i*300, i);}}
+    if (action == 'expand'){for (var i = 0; i < 5; i++){setTimeout(showWaves, i*100, i);}}
+    if (action == 'colapse'){for (var i = 0; i < 5; i++){setTimeout(hideWaves, i*100, i);}}
 
     function showWaves(i)
     {
         waves[i].style.opacity = 1;
         waves[i].style.height = (i+1)*600 + "px";
         waves[i].style.width = (i+1)*600 + "px";
+        waves[i].style.animationDelay = 0-(i+1)*25000 + "ms";
     }
     function hideWaves(i){waves[i].removeAttribute('style');}
 }
@@ -340,14 +342,19 @@ function menu(action)
 {
     let titles = document.getElementsByClassName('ST-textlink-container');
     let frames = document.getElementsByClassName("ST-frame-box");
+    var spans = document.getElementById('introText').children;
+
     if (action == 'show')
     {
+        // document.getElementById('intro').classList.remove('intro-container-hidden');
         for (var i = 0; i < 3; i++) {setTimeout(showMenu, i*200, i);}
+        for (var i = 0; i < spans.length; i++) {setTimeout(showIntro, i*200, i);}
     }
     if (action == 'hide')
     {
-        document.getElementById('intro').classList.add('intro-container-hidden');
+        // document.getElementById('intro').classList.add('intro-container-hidden');
         for (var i = 0; i < 3; i++) {setTimeout(hideMenu, i*0, i);}
+        for (var i = 0; i < spans.length; i++) {setTimeout(hideIntro, i*0, i);}
     }
     function showMenu(i)
     {
@@ -359,6 +366,8 @@ function menu(action)
         titles[i].classList.add('ST-hidden');
         frames[i].classList.add('ST-hidden');
     }
+    function showIntro(i){spans[i].classList.remove('intro-main-text-hidden');}
+    function hideIntro(i){spans[i].classList.add('intro-main-text-hidden');}
 }
 function switchItems(action, type)
 {
@@ -414,6 +423,34 @@ function selectProject(id)
         for (variable = (0); variable > (0 - projectsAmount); variable--) {document.getElementById('ELCwrapper' + variable).classList.remove('ELC-wrapper-part-selected');}
         document.getElementById('ELCwrapper' + id).classList.add('ELC-wrapper-part-selected');
     }
+}
+
+// ===== I N T R O =====
+
+var introTextsArray = [
+    "nice to meet you.",
+    "still here? that's cool.",
+    "kept you waiting, huh?",
+    "stop right there, criminal scum!",
+    "hello there."
+]
+
+function changeIntro()
+{
+    var introText = introTextsArray[Math.floor(Math.random() * introTextsArray.length)];
+    // var introWords = introText.split(/(\s+)/);
+    var introWords = introText.split(" ");
+    console.log(introWords);
+    document.getElementById('introText').innerHTML = '';
+    for (var i = 0; i < introWords.length; i++)
+    {
+        document.getElementById('introText').insertAdjacentHTML('beforeend', '<span>' + introWords[i] + ' ' + '</span>');
+    }   
+    var introSpans = document.getElementById('introText').children;
+    for (var i = 0; i < introWords.length; i++)
+    {
+        introSpans[i].classList.add('intro-main-text', 'intro-main-text-hidden');
+    }  
 }
 
 // ===== E L C =====

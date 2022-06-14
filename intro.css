@@ -17,12 +17,6 @@
 
   pointer-events: none;
 }
-.intro-container-hidden
-{
-    transition: all 1.5s;
-    filter: blur(30px);
-    opacity: 0;
-}
 .intro-text-wrapper
 {
     position: relative;
@@ -53,6 +47,15 @@
     /* letter-spacing: 50px; */
     /* background: black; */
     line-height: 80%;
+
+    transition: all 1.5s;
+}
+.intro-main-text-hidden
+{
+    transition: all 1.5s;
+    filter: blur(15px);
+    transform: translateX(-300px);
+    opacity: 0;
 }
 .intro-secondary-text
 {

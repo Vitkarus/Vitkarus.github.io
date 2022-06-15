@@ -20,6 +20,9 @@
     mask-repeat:no-repeat; */
     /* linear-gradient(rgba(0, 0, 0, 0) 0px, black var(--frame-margin), black calc(100% - var(--frame-margin)), rgba(0, 0, 0, 0) 100%); */
 }
+.projects-scroll-area::-webkit-scrollbar {
+    display: none;
+}
 .project-spaces
 {
     position: relative;

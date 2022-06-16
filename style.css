@@ -44,14 +44,6 @@ span
   align-items: center;
   justify-content: center; 
 }
-.logo
-{
-  position: absolute;
-  top: 25px;
-  left: 35px;
-  height: 65px;
-  filter: invert(37%) sepia(9%) saturate(0%) hue-rotate(164deg) brightness(93%) contrast(90%);
-}
 .background
 {
     position: absolute;

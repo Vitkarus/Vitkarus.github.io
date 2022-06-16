@@ -14,11 +14,14 @@ function init()
     fillBackground();
     createELCs();
     arrangeELCs();
+    setTimeout(changeLogo, 3000, 'VN');
     switchItems('hide', 'about');
     switchItems('hide', 'links');
     switchItems('hide', 'projects');
+    
     setTimeout(removeLimiter, 3000);
     stateMachine('intro');
+    
     scrollToProject(0);
 } 
 
@@ -126,6 +129,7 @@ function stateMachine(state)
         setTimeout(switchItems, 0, 'hide', 'about');
         setTimeout(switchItems, 0, 'hide', 'links');
         setTimeout(switchItems, 0, 'hide', 'projects');
+        setTimeout(changeLogo, 3000, 'VN');
         changeIntro();
         arrangeELCs();
     }
@@ -172,6 +176,7 @@ function stateMachine(state)
         centerELCs();
         setTimeout(reshapeSphere, 1500, 'expand');
         menu('hide');
+        setTimeout(changeLogo, 3000, 'cross');
         setTimeout(switchItems, 3000, 'show', 'about');
     }
     if (state == 'projects')
@@ -227,6 +232,7 @@ function stateMachine(state)
         centerELCs();
         // moveToRight();
         menu('hide');
+        setTimeout(changeLogo, 3000, 'cross');
         setTimeout(switchItems, 0, 'show', 'projects');
         scrollToProject(0);
     }
@@ -277,6 +283,7 @@ function stateMachine(state)
         // setTimeout(moveToRight, 0);
         // moveToRight();
         menu('hide');
+        setTimeout(changeLogo, 3000, 'cross');
         reshapeWaves('expand');
         switchItems('show', 'links');
     }
@@ -422,6 +429,22 @@ function selectProject(id)
         var variable;
         for (variable = (0); variable > (0 - projectsAmount); variable--) {document.getElementById('ELCwrapper' + variable).classList.remove('ELC-wrapper-part-selected');}
         document.getElementById('ELCwrapper' + id).classList.add('ELC-wrapper-part-selected');
+    }
+}
+
+// ===== L O G O =====
+
+function changeLogo(action)
+{
+    if (action == 'cross')
+    {
+        document.getElementById('logo').classList.add('logo-cross');
+        document.getElementById('logo').parentElement.style.pointerEvents = 'all';
+    }
+    if (action == 'VN')
+    {
+        document.getElementById('logo').classList.remove('logo-hidden', 'logo-cross');
+        document.getElementById('logo').parentElement.style.pointerEvents = 'none';
     }
 }
 

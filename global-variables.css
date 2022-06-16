@@ -63,6 +63,20 @@
     --close-button-size: 45px;
     --font-size: 17px;
 
+    /* ===== L O G O ===== */
+
+    --logo-thikness: 5px;
+    --logo-longness-N: 30px;
+    --logo-longness-V: calc(var(--logo-longness-N)*1.15);
+    --logo-latters-space: calc(var(--logo-longness-N)*0.65);
+    --logo-border-radius: 3px;
+    --logo-color: white;
+
+    --cross-thikness: 4px;
+    --cross-longness: 50px;
+    --cross-longness-half-hypotenuse: calc(var(--cross-longness)/2 - var(--cross-thikness));
+    --cross-longness-half-leg: calc(var(--cross-longness-half-hypotenuse)*0.71);
+
     /* ===== C O L O R = S C H E M E S ===== */
 
     /* === Original === */

@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="CT.css">
         <link rel="stylesheet" href="ST.css">
         <link rel="stylesheet" href="intro.css">
+        <link rel="stylesheet" href="logo.css">
         <link rel="stylesheet" href="menus.css">
         <link rel="stylesheet" href="menu-about.css">
         <link rel="stylesheet" href="menu-projects.css">
@@ -25,15 +26,25 @@
     </div>
     <!-- <div class="blend-wrapper-blur"></div> -->
     <div class="container">
-        <div class="logo-and-button-container" style="height: 100%;">
-            <img class="logo" src="assets/my_logo.svg">
-            <div class="close-button-container">
+        <div class="logo-container" onmouseup="stateMachine('menu')">
+            <!-- <div class="logo-text">Viktor<br>Nikitinskiy</div> -->
+            <div class="logo logo-cross logo-hidden" id="logo">
+                <div class="logo-V1">                        
+                    <div class="logo-V2"></div>
+                </div>
+                <div class="logo-N1">
+                    <div class="logo-N2">
+                        <div class="logo-N3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- <div class="close-button-container">
                 <div class="close-button-frame"></div>
                 <div class="close-button">
                     <img src="assets/close.svg" alt="Close" onmouseup="stateMachine('menu')">
                 </div>
-            </div>
-        </div>
+            </div> -->
         <div id="pillar" class="ELC-pillar">
             <div class="intro-container" id="intro">
                 <div class="intro-text-wrapper">

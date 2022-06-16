@@ -3,7 +3,7 @@
     position: relative;
     height: fit-content;
     /* max-height: 90vh; */
-    width: 80%;
+    width: 100%;
 
     overflow-x: hidden; 
 	overflow-y: scroll;

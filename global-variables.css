@@ -30,8 +30,8 @@
     --ELC-shadow-NE-indent: 0px;
     --ELC-shadow-SW-indent: 45px;
 
-    --ELC-anim-speed1: 2s;
-    --ELC-anim-speed2: 2s;
+    --ELC-anim-speed1: 0.3s;
+    --ELC-anim-speed2: 0.3s;
 
     /* === Intro === */
 

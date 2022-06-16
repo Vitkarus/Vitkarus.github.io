@@ -11,16 +11,18 @@ function init()
     // measureEdgelessCube(0, 0, 0);
     // measurePyramide();
     // trackCT();
-    fillBackground();
+    // fillBackground();
     createELCs();
     arrangeELCs();
     setTimeout(changeLogo, 3000, 'VN');
     switchItems('hide', 'about');
     switchItems('hide', 'links');
     switchItems('hide', 'projects');
+    highlightOnScroll();
     
     setTimeout(removeLimiter, 3000);
     stateMachine('intro');
+
     
     scrollToProject(0);
 } 
@@ -406,6 +408,21 @@ function switchItems(action, type)
     function hideItem(i){items[i].classList.add('menus-hidden-item');}
 }
 
+// ===== С Е Л Е К Т О Р = С Т О Л Б А =====
+
+function highlightOnScroll()
+{
+    var scrolled;
+    var totalScroll = document.getElementById('projects-scroll-area').scrollHeight;
+    var scrollPerProject = totalScroll/projectsAmount;
+
+    document.getElementById('projects-scroll-area').addEventListener('scroll', function() 
+    {
+        scrolled = document.getElementById('projects-scroll-area').scrollTop;
+        selectProject(0 - Math.round(scrolled/scrollPerProject));
+      });
+}
+
 function scrollToProject(id)
 {
     let project = document.getElementsByClassName("project-cell-container");
@@ -417,9 +434,7 @@ function scrollToProject(id)
     
     
     var offset = project[number].offsetTop - 110;
-    project[0].parentElement.scrollTo({top: offset, behavior: 'smooth'});
-    console.log(offset);
-    
+    project[0].parentElement.scrollTo({top: offset, behavior: 'smooth'});  
 }
 
 function selectProject(id)
@@ -427,7 +442,8 @@ function selectProject(id)
     if (pillarState == 'projects')
     {
         var variable;
-        for (variable = (0); variable > (0 - projectsAmount); variable--) {document.getElementById('ELCwrapper' + variable).classList.remove('ELC-wrapper-part-selected');}
+        for (variable = (0); variable > (0 - projectsAmount); variable--) 
+        {document.getElementById('ELCwrapper' + variable).classList.remove('ELC-wrapper-part-selected');}
         document.getElementById('ELCwrapper' + id).classList.add('ELC-wrapper-part-selected');
     }
 }
@@ -586,9 +602,6 @@ function startReflectLight(id)
     let upperSlate = document.getElementById('ELCcontainer' + (id + 1)).getElementsByClassName("ELC-lightning-receiving");
     let bottomSlate = document.getElementById('ELCcontainer' + (id - 1)).getElementsByClassName('ELC-lightning-receiving');
 
-    console.log('lol');
-    
-    
         upperSlate[1].style.opacity = 0.3;
         upperSlate[2].style.opacity = 0.3;
     

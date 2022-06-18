@@ -180,6 +180,37 @@ function changeLogo(action)
     }
 }
 
+// ===== T O P = B A R =====
+
+function changeTopBar(id)
+{
+    var topBarItems = document.getElementById('topBar').children;
+    if (id == 'menu')
+    {
+        topBarItems[0].classList.add('top-bar-wrapper-hidden');
+        topBarItems[1].classList.add('top-bar-wrapper-hidden');
+        topBarItems[2].classList.add('top-bar-wrapper-hidden');
+    }
+    if (id == 'about')
+    {
+        topBarItems[0].classList.add('top-bar-wrapper-hidden');
+        topBarItems[1].classList.remove('top-bar-wrapper-hidden');
+        topBarItems[2].classList.remove('top-bar-wrapper-hidden');
+    }
+    if (id == 'projects')
+    {
+        topBarItems[0].classList.remove('top-bar-wrapper-hidden');
+        topBarItems[1].classList.add('top-bar-wrapper-hidden');
+        topBarItems[2].classList.remove('top-bar-wrapper-hidden');
+    }
+    if (id == 'links')
+    {
+        topBarItems[0].classList.remove('top-bar-wrapper-hidden');
+        topBarItems[1].classList.remove('top-bar-wrapper-hidden');
+        topBarItems[2].classList.add('top-bar-wrapper-hidden');
+    }
+}
+
 // ===== I N T R O =====
 
 var introTextsArray = [

@@ -1,0 +1,54 @@
+.top-bra-container
+{
+    position: absolute;
+    height: var(--close-button-size);
+    width: var(--close-button-size);
+    left: var(--frame-margin);
+    top: var(--frame-margin);
+
+    margin-top: -3px;
+    margin-left: 90px;
+
+    z-index: 4000;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.top-bar-wrapper
+{
+    position: relative;
+    padding-right: 40px;
+    height: fit-content;
+    width: 200px;
+
+    transition: all var(--top-bar-wrapper-speed);
+}
+.top-bar-wrapper-hidden
+{
+    width: 0;
+    padding-right: 0;
+    opacity: 0;
+    filter: blur(10px);
+    pointer-events: none;
+
+    transform: translateX(100px);
+    transition: all var(--top-bar-wrapper-hidden-speed);
+}
+.top-bar-item
+{
+    position: relative;
+    font-family: "Square721";
+    font-size: calc(var(--font-size) * 1.2);
+    color: white; /* DAD7C8 65645c */
+
+    cursor: pointer;
+    /* letter-spacing: 50px; */
+    /* background: black; */
+    transition: all var(--top-bar-item-speed);
+}
+.top-bar-item:active 
+{
+    transform: scale(0.9);
+    transition: all var(--top-bar-item-activate-speed);
+}

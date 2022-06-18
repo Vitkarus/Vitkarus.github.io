@@ -32,6 +32,13 @@
   --logo-V-speed: 0.5s;
   --logo-N-speed: 0.33s;
 
+  /* === Top bar === */
+
+  --top-bar-wrapper-speed: 1s;
+  --top-bar-wrapper-hidden-speed: 1s;
+  --top-bar-item-speed: 0.3s;
+  --top-bar-item-activate-speed: 0.3s;
+
   /* === Menus === */
 
   --menus-hidden-item-speed: 1s; /* Неизвестно */
@@ -72,6 +79,10 @@
 
   --menu-show-setTimeout: 200;
   --menu-hide-setTimeout: 0;
+
+  /* === changeTopBar === */
+
+  --changeTopBar-from-menu-setTimeout: 3000;
 
   /* === switchItems === */
 

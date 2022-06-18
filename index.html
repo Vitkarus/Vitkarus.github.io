@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="styles/ST.css">
         <link rel="stylesheet" href="styles/intro.css">
         <link rel="stylesheet" href="styles/logo.css">
+        <link rel="stylesheet" href="styles/top-bar.css">
         <link rel="stylesheet" href="styles/menus.css">
         <link rel="stylesheet" href="styles/menu-about.css">
         <link rel="stylesheet" href="styles/menu-projects.css">
@@ -30,6 +31,17 @@
     </div>
     <!-- <div class="blend-wrapper-blur"></div> -->
     <div class="container">
+        <div class="top-bra-container" id="topBar">
+            <div class="top-bar-wrapper top-bar-wrapper-hidden">
+                <div class="top-bar-item" onmouseup="stateMachine('menu', 'topBar'); stateMachine('about', 'topBar')">about</div>
+            </div>
+            <div class="top-bar-wrapper top-bar-wrapper-hidden">
+                <div class="top-bar-item" onmouseup="stateMachine('menu', 'topBar'); stateMachine('projects', 'topBar')">projects</div>
+            </div>
+            <div class="top-bar-wrapper top-bar-wrapper-hidden">
+                <div class="top-bar-item" onmouseup="stateMachine('menu', 'topBar'); stateMachine('links', 'topBar')">links</div>
+            </div>
+        </div>
         <div class="logo-container" onmouseup="stateMachine('menu')">
             <!-- <div class="logo-text">Viktor<br>Nikitinskiy</div> -->
             <div class="logo logo-cross logo-hidden" id="logo">
@@ -64,7 +76,7 @@
         <div id="pillar" class="ELC-pillar">
             <div class="ELC-margins"></div>
             <div class="ST-textlink-container ST-hidden">
-                <div class="ST" onmouseover="activateMenu('aboutText', 'menu')" onmouseout="deactivateMenu('aboutText', 'menu')" onmouseup="stateMachine('about')">a b o u t</div>
+                <div class="ST" onmouseover="activateMenu('aboutText', 'menu')" onmouseout="deactivateMenu('aboutText', 'menu')" onmouseup="stateMachine('about', 'none')">a b o u t</div>
             </div>
             <div class="ELC-offset" style="--z:1; --s:1">
                 <div class="ST-frame-box ST-hidden">
@@ -126,7 +138,7 @@
             </div>
             <div class="ELC-margins"></div>
             <div class="ST-textlink-container ST-hidden">
-                <div class="ST" onmouseover="activateMenu('projectsText', 'menu')" onmouseout="deactivateMenu('projectsText', 'menu')" onmouseup="stateMachine('projects')">p r o j e c t s </div>
+                <div class="ST" onmouseover="activateMenu('projectsText', 'menu')" onmouseout="deactivateMenu('projectsText', 'menu')" onmouseup="stateMachine('projects', 'none')">p r o j e c t s </div>
             </div>
             <div class="ELC-offset" style="--z:0; --s:0">
                 <div class="ST-frame-box ST-hidden">
@@ -186,7 +198,7 @@
             </div>
             <div class="ELC-margins"></div>
             <div class="ST-textlink-container ST-hidden">
-                <div class="ST" onmouseover="activateMenu('linksText', 'menu')" onmouseout="deactivateMenu('linksText', 'menu')" onmouseup="stateMachine('links')">l i n k s</div>
+                <div class="ST" onmouseover="activateMenu('linksText', 'menu')" onmouseout="deactivateMenu('linksText', 'menu')" onmouseup="stateMachine('links', 'none')">l i n k s</div>
             </div>
             <div class="ELC-offset" style="--z:-1; --s:1">
                 <div class="ST-frame-box ST-hidden">

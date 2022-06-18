@@ -30,6 +30,7 @@ function stateMachine(state, place)
 
     if (state == 'menu')
     {
+        pillarState = 'menu';
 
         // Applying variables to ELCs, can be used with delay
 
@@ -95,13 +96,20 @@ function stateMachine(state, place)
         setTimeout(switchItems, 0, 'hide', 'links');
         setTimeout(switchItems, 0, 'hide', 'projects');
 
-        setTimeout(menu, getCSSvar('--stateMachine-showmenu-setTimeout'), 'show');
+        if (place == 'topBar')
+        {
+            changeTopBar('menu');
+        }
+        else
+        {
+            setTimeout(menu, getCSSvar('--stateMachine-showmenu-setTimeout'), 'show');
 
-        setTimeout(changeLogo, getCSSvar('--stateMachine-changeLogo-setTimeout'), 'VN');
-        changeTopBar('menu');
-        changeIntro();
+            setTimeout(changeLogo, getCSSvar('--stateMachine-changeLogo-setTimeout'), 'VN');
+            changeTopBar('menu');
+            changeIntro();
 
-        arrangeELCs();
+            arrangeELCs();
+        }
 
         // setTimeout(deactivateMenu, getCSSvar('--stateMachine-mainmenu-deactivateMenu-setTimeout'), 'aboutText', 'menu');
         // document.documentElement.style.setProperty('--ELC-transformY-global-for-content', "0vh");
@@ -111,6 +119,7 @@ function stateMachine(state, place)
 
     if (state == 'about')
     {
+        pillarState = 'about';
 
         // Applying variables to ELCs, can be used with delay   
 
@@ -171,6 +180,7 @@ function stateMachine(state, place)
 
     if (state == 'projects')
     {
+        pillarState = 'projects';
 
         // Applying variables to ELCs, can be used with delay
 
@@ -244,6 +254,7 @@ function stateMachine(state, place)
 
     if (state == 'links')
     {
+        pillarState = 'links';
 
         // Applying variables to ELCs, can be used with delay
 

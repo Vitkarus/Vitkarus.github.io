@@ -5,6 +5,7 @@
     width: var(--close-button-size);
     left: var(--frame-margin);
     top: var(--frame-margin);
+    cursor: pointer;
 
     z-index: 3000;
 

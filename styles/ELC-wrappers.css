@@ -122,9 +122,9 @@
 
 .ELC-wrapper-part-selected
 {
-    --ELC-length-global: 75px;
+    --ELC-length-global: 60px;
     --ELC-border-radius-global: 0px;
-    --ELC-height-global: 50px;
+    --ELC-height-global: 42px;
     background: var(--ELC-glov-color1);
 }
 .ELC-wrapper-part-other

@@ -16,6 +16,7 @@ function init()
     // measureEdgelessCube(0, 0, 0);
     // measurePyramide();
     // trackCT();
+    // introAnim();
     fillBackground();
     createELCs();
     arrangeELCs();
@@ -25,8 +26,8 @@ function init()
     switchItems('hide', 'projects');
     highlightOnScroll();
     setTimeout(removeLimiter, getCSSvar('--removeLimiter-setTimeout'));
-    stateMachine('intro');
-
+    setTimeout(stateMachine, 0, 'intro');
+    // stateMachine('intro');
     
     scrollToProject(0);
 } 
@@ -104,6 +105,7 @@ function menu(action)
     let titles = document.getElementsByClassName('ST-textlink-container');
     let frames = document.getElementsByClassName("ST-frame-box");
     var spans = document.getElementById('introText').children;
+    var divs = document.getElementById('introSubText').children;
 
     if (action == 'show')
     {
@@ -116,6 +118,7 @@ function menu(action)
         // document.getElementById('intro').classList.add('intro-container-hidden');
         for (var i = 0; i < 3; i++) {setTimeout(hideMenu, i*getCSSvar('--menu-hide-setTimeout'), i);}
         for (var i = 0; i < spans.length; i++) {setTimeout(hideIntro, i*getCSSvar('--menu-hide-setTimeout'), i);}
+        for (var i = 0; i < divs.length; i++) {setTimeout(hideSubIntro, i*getCSSvar('--menu-hide-setTimeout'), i);}
     }
     function showMenu(i)
     {
@@ -129,6 +132,7 @@ function menu(action)
     }
     function showIntro(i){spans[i].classList.remove('intro-main-text-hidden');}
     function hideIntro(i){spans[i].classList.add('intro-main-text-hidden');}
+    function hideSubIntro(i){divs[i].classList.add('intro-main-text-hidden');}
 }
 
 // === появление и исчезновение элементов подкатегорий ===
@@ -213,8 +217,21 @@ function changeTopBar(id)
 
 // ===== I N T R O =====
 
+function introAnim()
+{
+    var childrenAmount = document.getElementById('opening1').childElementCount + document.getElementById('opening2').childElementCount;
+    var divs1 = document.getElementById('opening1').children;
+    var divs2 = document.getElementById('opening2').children;
+    var divs3 = divs1.concat(divs2);
+    for (var i = 0; i < childrenAmount; i++) {setTimeout(hide, i * 200, i);}
+    function hide(i){divs1[i].classList.add('intro-main-text-hidden');}
+
+    divs1[i].classList.add('intro-main-text-hidden');
+        divs2[i].classList.add('intro-main-text-hidden');
+}
+
 var introTextsArray = [
-    "nice to meet you.",
+    // "nice to meet you.",
     "still here? that's cool.",
     "kept you waiting, huh?",
     "stop right there, criminal scum!",
@@ -231,14 +248,15 @@ function changeIntro()
     // var introWords = introText.split(/(\s+)/);
     var introWords = introText.split(" ");
     var introSymbols = introText.length;
-    var textSize = Math.abs(17/introSymbols);
-    document.documentElement.style.setProperty('--intro-main-text-size', 18 * textSize + 'vh');
+    var textSize = Math.abs(20/introSymbols);
+    document.documentElement.style.setProperty('--intro-main-text-size', 140 * textSize + 'px');
     // console.log(introSymbols);
     // console.log(introWords);
+    document.getElementById('introSubText').innerHTML = '';
     document.getElementById('introText').innerHTML = '';
     for (var i = 0; i < introWords.length; i++)
     {
-        document.getElementById('introText').insertAdjacentHTML('beforeend', '<span>' + introWords[i] + ' ' + '</span>');
+        document.getElementById('introText').insertAdjacentHTML('beforeend', '<div>' + introWords[i] + ' ' + '</div>');
     }   
     var introSpans = document.getElementById('introText').children;
     for (var i = 0; i < introWords.length; i++)

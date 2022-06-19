@@ -216,13 +216,13 @@ function stateMachine(state, place)
         for (variable = (-1); variable > (0 - projectsAmount); variable--) 
         {
             document.getElementById('ELCwrapper' + variable).classList.add('ELC-wrapper-part-other');
-            document.getElementById('ELCwrapper' + variable).parentElement.style.marginBottom = '60px';
+            document.getElementById('ELCwrapper' + variable).parentElement.style.marginBottom = '48px';
         }
 
         document.getElementById('ELCwrapper1').classList.add('ELC-wrapper-next');
         document.getElementById('ELCwrapper0').classList.add('ELC-wrapper-part-selected');
-        document.getElementById('ELCwrapper0').parentElement.style.marginTop = '60px';
-        document.getElementById('ELCwrapper0').parentElement.style.marginBottom = '60px';
+        document.getElementById('ELCwrapper0').parentElement.style.marginTop = '48px';
+        document.getElementById('ELCwrapper0').parentElement.style.marginBottom = '48px';
 
         // Margins between main ELCs
 

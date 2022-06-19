@@ -38,9 +38,10 @@
 
   /* ===== I N T R 0 ===== */
 
-  --intro-main-text-size: 18vh;
+  --intro-main-text-size: 140px;
   --intro-main-text-lower-limit: 60px;
-  --intro-main-text-upper-limit: 250px;
+  --intro-main-text-upper-limit: 200px;
+  --intro-secondary-text-size: 50px;
 
     /* ===== P R O J E C T S ===== */
 
@@ -144,4 +145,3 @@
     --rounded-size: 100px;
     --rounded-boreder-radius: 14px;
 }
-

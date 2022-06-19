@@ -18,7 +18,7 @@
 
   --ST-textlink-container-speed: 1.5s; /* Появление блоков надписей */
   --ST-speed: 0.3s; 
-  --ST-active-speed: 0.3s;
+  --ST-active-speed: 0.75s;
   --ST-frame-box-speed: 1.5s;
 
   /* === Intro === */
@@ -61,7 +61,7 @@
   --links-cell-grid-hover-speed: 0.3s; /* Скорость появления света | 1s */
   --links-cell-back-speed: 0.5s; /* Скорость исчезновения задней подсветки и блюра | 2s */
   --links-cell-back-flare-container-speed: 0.5s; /* Скорость исчезновения флэра | 2s */
-  --links-waves-rotation-speed: 120s;
+  --links-waves-rotation-speed: 100s;
 
   /* ===== J S ===== */
 
@@ -103,7 +103,4 @@
   --stateMachine-about-reshapeSphere-setTimeout: 3500;
   --stateMachine-changeLogoToCross-setTimeout: 3000;
   --stateMachine-changeLogoToNV-setTimeout: 3000;
-
-
-
 }

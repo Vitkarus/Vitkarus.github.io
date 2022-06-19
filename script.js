@@ -238,13 +238,16 @@ var introTextsArray = [
     "hello there.",
     "bottom text. upper text.",
     "why can't safari handle my site :/",
-    "graphic design is my passion.",
-    "there's a lot more to do here."
+    "there's a lot more to do here.",
+    "graphic design is my passion."
 ]
 
 function changeIntro()
 {
-    var introText = introTextsArray[Math.floor(Math.random() * introTextsArray.length)];
+    var number = Math.floor(Math.random() * introTextsArray.length);
+    var introText = introTextsArray[number];
+    if (number == 7){document.documentElement.style.setProperty('--intro-main-text-font', "ComicSans");}
+    else {document.documentElement.style.setProperty('--intro-main-text-font', "Square721");};
     // var introWords = introText.split(/(\s+)/);
     var introWords = introText.split(" ");
     var introSymbols = introText.length;

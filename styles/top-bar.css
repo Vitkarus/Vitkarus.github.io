@@ -40,7 +40,7 @@
     position: relative;
     font-family: "Square721";
     font-size: calc(var(--font-size) * 1.2);
-    color: white; /* DAD7C8 65645c */
+    color: var(--top-bar-color); /* DAD7C8 65645c */
 
     cursor: pointer;
     /* letter-spacing: 50px; */

@@ -1,3 +1,7 @@
+:root
+{
+    --intro-main-text-font: "Square721";
+}
 .intro-container
 {
     position: absolute;
@@ -45,9 +49,9 @@
 .intro-main-text
 {
     position: relative;
-    font-family: "Square721";
+    font-family: var(--intro-main-text-font);
     font-size: clamp(var(--intro-main-text-lower-limit), var(--intro-main-text-size), var(--intro-main-text-upper-limit));
-    color: white; /* DAD7C8 65645c */
+    color: var(--main-text-color); /* DAD7C8 65645c */
     /* letter-spacing: 50px; */
     /* background: black; */
     line-height: 95%;
@@ -68,7 +72,7 @@
     position: relative;
     font-family: "Mina";
     font-size: var(--intro-secondary-text-size);
-    color: lightgray; /* DAD7C8 65645c */
+    color: var(--secondary-text-color); /* DAD7C8 65645c */
     line-height: 200%;
     padding-right: calc(var(--intro-secondary-text-size) * 0.3);
     /* letter-spacing: 50px; */

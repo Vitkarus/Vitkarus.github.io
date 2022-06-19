@@ -14,6 +14,11 @@
     font-family: "Mina";
     src: url("assets/fonts/Mina.woff2") format("woff2");
 }
+@font-face 
+{
+    font-family: "ComicSans";
+    src: url("assets/fonts/ComicSans.woff2") format("woff2");
+}
 a { text-decoration: none; }
 /* div {
   outline: 1px solid red;

@@ -1,0 +1,110 @@
+:root
+{
+    /* ========== C = O = L = O = R === S = C = H = E = M = E = S ========== */
+
+    /* ===== O R I G I N A L ===== */
+
+    --main-color: #5C5C5C;
+    --overlay-color: none;
+    --lines-color: coral;
+
+    --filter-light-color: invert(96%) sepia(15%) saturate(172%) hue-rotate(355deg) brightness(93%) contrast(87%);
+    --filter-dark-color: invert(37%) sepia(1%) saturate(0%) hue-rotate(167deg) brightness(95%) contrast(94%);
+    --filter-glov-color1: invert(72%) sepia(48%) saturate(4114%) hue-rotate(326deg) brightness(101%) contrast(101%);
+
+    /* === ELC === */
+
+    --ELC-glass-color1: rgb(184, 184, 184);
+    --ELC-glass-color2: rgb(125, 125, 125);
+    --ELC-glov-color1: #ff7f50;
+    --ELC-glov-inner-color: rgb(255, 211, 196);
+    --ELC-glov-color2: rgb(133, 244, 233);
+
+    --shadow-color1: rgba(0, 0, 0, 0.01);
+    --shadow-color2: rgba(0, 0, 0, 0.15); 
+    --shadow-color3: rgba(0, 0, 0, 0.4); 
+    --shadow-color4: rgba(0, 0, 0, 0.6); 
+
+    /* === Background === */
+
+    --background-color-light: #CBC6AE;
+    --background-color-dark: #C6C1A9; 
+
+    /* === Intro === */
+
+    --main-text-color: var(--main-color);
+    --secondary-text-color: rgb(81, 81, 81);
+    --ST-color: white;
+
+    /* === Top bar === */
+
+    --logo-color: var(--main-color);
+    --top-bar-color: var(--main-color);
+
+    /* === About === */
+
+    --about-text-color: var(--main-color);
+
+    /* === Projects === */
+
+    --project-cell-title-color: var(--main-color);
+    --project-cell-text-color: var(--main-color);
+    --project-cell-button-color: var(--main-color);
+    --project-cell-button-text-color: var(--background-color-dark);
+
+    /* ===== D A R K ===== */
+
+    --main-color: rgb(220, 220, 220);
+    --secondary-color: rgb(195, 195, 195);
+    --overlay-color: none;
+    --lines-color: coral;
+
+    --filter-light-color: invert(4%) sepia(14%) saturate(8%) hue-rotate(314deg) brightness(97%) contrast(81%);
+    --filter-dark-color: none;
+    --filter-glov-color1: invert(72%) sepia(48%) saturate(4114%) hue-rotate(326deg) brightness(101%) contrast(101%);
+
+    /* === ELC === */
+
+    /* --ELC-glass-color1: rgb(228, 228, 228); */
+    /* --ELC-glass-color2: rgb(70, 70, 70); */
+    --ELC-glass-color1: rgb(220, 220, 220);
+    --ELC-glass-color2: rgb(55, 55, 55);
+    --ELC-glov-color1: #ff7f50;
+    --ELC-glov-inner-color: rgb(255, 211, 196);
+    --ELC-glov-color2: rgb(133, 244, 233);
+
+    --shadow-color1: rgba(0, 0, 0, 0.01);
+    --shadow-color2: rgba(0, 0, 0, 0.15); 
+    --shadow-color3: rgba(0, 0, 0, 0.4); 
+    --shadow-color4: rgba(0, 0, 0, 0.6); 
+
+    /* === Background === */
+
+    /* --background-color-light: #393939;
+    --background-color-dark: #363636;  */
+    --background-color-light: #292929;
+    --background-color-dark: #262626; 
+
+    /* === Intro === */
+
+    --main-text-color: var(--main-color);
+    --secondary-text-color: var(--secondary-color);
+    --ST-color: var(--main-color);
+
+    /* === Top bar === */
+
+    --logo-color: var(--main-color);
+    --top-bar-color: var(--main-color);
+
+    /* === About === */
+
+    --about-text-color: var(--main-color);
+
+    /* === Projects === */
+
+    --project-cell-title-color: var(--main-color);
+    --project-cell-text-color: var(--main-color);
+    --project-cell-button-color: var(--main-color);
+    --project-cell-button-text-color: var(--background-color-dark);
+    
+}

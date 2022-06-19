@@ -97,7 +97,7 @@
     height: 275%;
     width: 275%;
     opacity: 0;
-    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.7);
+    box-shadow: inset 0 0 0 3px var(--lines-color);
     border-radius: 20px;
 
     transition: all var(--close-button-frame-speed);

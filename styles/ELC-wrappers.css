@@ -101,7 +101,7 @@
     width: 1000px;
     border-radius: 500px;
     background: none;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+    box-shadow: inset 0 0 0 1px var(--lines-color);
 
     transform: translateY(-50%) rotateX(60deg) rotateZ(45deg) rotateY(0deg);
 }

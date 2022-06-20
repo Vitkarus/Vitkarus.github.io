@@ -234,7 +234,7 @@ var introTextsArray = [
     // "nice to meet you.",
     "still here? that's cool.",
     "kept you waiting, huh?",
-    "stop right there, criminal scum!",
+    // "stop right there, criminal scum!",
     "hello there.",
     "bottom text. upper text.",
     "why can't safari handle my site :/",
@@ -246,7 +246,7 @@ function changeIntro()
 {
     var number = Math.floor(Math.random() * introTextsArray.length);
     var introText = introTextsArray[number];
-    if (number == 7){document.documentElement.style.setProperty('--intro-main-text-font', "ComicSans");}
+    if (number == 6){document.documentElement.style.setProperty('--intro-main-text-font', "ComicSans");}
     else {document.documentElement.style.setProperty('--intro-main-text-font', "Square721");};
     // var introWords = introText.split(/(\s+)/);
     var introWords = introText.split(" ");

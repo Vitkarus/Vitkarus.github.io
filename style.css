@@ -27,6 +27,8 @@ body
 {
   height: 100%;
   width: 100%;
+
+  background: var(--background-color-dark);
   
   display: flex;
   align-items: center;
@@ -54,11 +56,11 @@ span
     position: absolute;
   height: 100%;
   width: 100%;
-  background: var(--background-color-dark);
 
   z-index: -50;
 
   filter: blur(1.5px);
+  overflow: hidden;
 
   display: grid;
   gap: 3px;
@@ -74,6 +76,15 @@ span
   height: 100%;
   width: 100%;
   background: var(--background-color-light);
+}
+.background-img
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  -webkit-mask: radial-gradient(rgba(0, 0, 0) 60%, rgba(0, 0, 0, 0) 70%);
 }
 .overlay
 {

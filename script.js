@@ -17,7 +17,7 @@ function init()
     // measurePyramide();
     // trackCT();
     // introAnim();
-    fillBackground();
+    // fillBackground();
     createELCs();
     arrangeELCs();
     setTimeout(changeLogo, getCSSvar('--changeLogo-setTimeout'), 'VN');

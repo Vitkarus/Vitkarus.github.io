@@ -38,16 +38,16 @@
     <div class="container">
         <div class="top-bra-container" id="topBar">
             <div class="top-bar-wrapper top-bar-wrapper-hidden">
-                <div class="top-bar-item" onmouseup="stateMachine('menu', 'topBar'); stateMachine('about', 'topBar')">about</div>
+                <div class="top-bar-item" onmouseover="willChange()" onmouseup="stateMachine('menu', 'topBar'); stateMachine('about', 'topBar')">about</div>
             </div>
             <div class="top-bar-wrapper top-bar-wrapper-hidden">
-                <div class="top-bar-item" onmouseup="stateMachine('menu', 'topBar'); stateMachine('projects', 'topBar')">projects</div>
+                <div class="top-bar-item" onmouseover="willChange()" onmouseup="stateMachine('menu', 'topBar'); stateMachine('projects', 'topBar')">projects</div>
             </div>
             <div class="top-bar-wrapper top-bar-wrapper-hidden">
-                <div class="top-bar-item" onmouseup="stateMachine('menu', 'topBar'); stateMachine('links', 'topBar')">links</div>
+                <div class="top-bar-item" onmouseover="willChange()" onmouseup="stateMachine('menu', 'topBar'); stateMachine('links', 'topBar')">links</div>
             </div>
         </div>
-        <div class="logo-container" onmouseup="stateMachine('menu')">
+        <div class="logo-container" onmouseover="willChange()" onmouseup="stateMachine('menu')">
             <!-- <div class="logo-text">Viktor<br>Nikitinskiy</div> -->
             <div class="logo logo-cross logo-hidden" id="logo">
                 <div class="logo-V1">                        
@@ -126,7 +126,7 @@
                                 <div class="ELC-lightning-top-empty"></div>
                                 <div class="ELC-lightning-top-empty"></div>
                             </div>
-                            <div class="ELC-texture"></div>
+                            <!-- <div class="ELC-texture"></div> -->
                             <div class="ELC-lightning-receiving"></div>
                         </div>
                         <div class="ELC-side">
@@ -137,7 +137,7 @@
                                 <div class="ELC-lightning-segment-4"></div>
                                 <div class="ELC-lightning-segment-5"></div>
                             </div>
-                            <div class="ELC-texture"></div>
+                            <!-- <div class="ELC-texture"></div> -->
                             <div class="ELC-lightning-receiving"></div>
                         </div>
                         <div class="ELC-bottom">
@@ -148,7 +148,7 @@
                                 <div class="ELC-lightning-segment-4"></div>
                                 <div class="ELC-lightning-segment-5"></div>
                             </div>
-                            <div class="ELC-texture"></div>
+                            <!-- <div class="ELC-texture"></div> -->
                             <div class="ELC-lightning-receiving"></div>
                         </div>
                     </div>
@@ -186,7 +186,7 @@
                                 <div class="ELC-lightning-top-empty"></div>
                                 <div class="ELC-lightning-top-empty"></div>
                             </div>
-                            <div class="ELC-texture"></div>
+                            <!-- <div class="ELC-texture"></div> -->
                             <div class="ELC-lightning-receiving"></div>
                         </div>
                         <div class="ELC-side">
@@ -197,7 +197,7 @@
                                 <div class="ELC-lightning-segment-4"></div>
                                 <div class="ELC-lightning-segment-5"></div>
                             </div>
-                            <div class="ELC-texture"></div>
+                            <!-- <div class="ELC-texture"></div> -->
                             <div class="ELC-lightning-receiving"></div>
                         </div>
                         <div class="ELC-bottom">
@@ -208,7 +208,7 @@
                                 <div class="ELC-lightning-segment-4"></div>
                                 <div class="ELC-lightning-segment-5"></div>
                             </div>
-                            <div class="ELC-texture"></div>
+                            <!-- <div class="ELC-texture"></div> -->
                             <div class="ELC-lightning-receiving"></div>
                         </div>
                     </div>
@@ -246,7 +246,7 @@
                                 <div class="ELC-lightning-top-empty"></div>
                                 <div class="ELC-lightning-top-empty"></div>
                             </div>
-                            <div class="ELC-texture"></div>
+                            <!-- <div class="ELC-texture"></div> -->
                             <div class="ELC-lightning-receiving"></div>
                         </div>
                         <div class="ELC-side">
@@ -257,7 +257,7 @@
                                 <div class="ELC-lightning-segment-4"></div>
                                 <div class="ELC-lightning-segment-5"></div>
                             </div>
-                            <div class="ELC-texture"></div>
+                            <!-- <div class="ELC-texture"></div> -->
                             <div class="ELC-lightning-receiving"></div>
                         </div>
                         <div id="waves" class="links-waves-container">
@@ -285,7 +285,7 @@
                                 <div class="ELC-lightning-segment-4"></div>
                                 <div class="ELC-lightning-segment-5"></div>
                             </div>
-                            <div class="ELC-texture"></div>
+                            <!-- <div class="ELC-texture"></div> -->
                             <div class="ELC-lightning-receiving"></div>
                         </div>
                     </div>
@@ -303,7 +303,7 @@
                 <!-- <div class="about-frame-corners" style="top: 100%; left: 100%; transform: rotate(180deg);"></div> -->
                 <div class="about-text-container">
                     <div class="about-text-empty"></div>
-                    <div class="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nisl nisi scelerisque eu ultrices vitae auctor eu augue. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Quisque egestas diam in arcu cursus euismod quis. Enim tortor at auctor urna nunc id cursus.</div>
+                    <div class="about-text">My graphic design job has evolved over time into more than simply a hobby. I enjoy learning new things, paying attention to the smallest details and features of my own and other people's projects in order to change and enhance them. All of this is done to give users finest experience without sacrificing looks or content.</div>
                     <div class="about-text-empty"></div>
                 </div>
             </div>
@@ -324,7 +324,7 @@
                         <div class="project-cell-description-container">
                             <div class="project-cell-title">UNDER SIGHT</div>
                             <div class="project-text-spaces"></div>
-                            <div class="project-cell-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nisl nisi scelerisque eu ultrices vitae auctor eu augue. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus.</div>
+                            <div class="project-cell-text">Concept of a news site for a digital publishing specializing in modern technologies and information security.</div>
                             <div class="project-text-spaces"></div>
                             <div class="project-text-spaces"></div>
                             <div class="project-cell-button-container">
@@ -351,7 +351,7 @@
                         <div class="project-cell-description-container">
                             <div class="project-cell-title">CONSTRUCTIONS MATERIALS CENTER</div>
                             <div class="project-text-spaces"></div>
-                            <div class="project-cell-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nisl nisi scelerisque eu ultrices vitae auctor eu augue. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus.</div>
+                            <div class="project-cell-text">Creation of identity and corporate style, made for the company CSK LLC, which specializes in the sale of building materials and construction work.</div>
                             <div class="project-text-spaces"></div>
                             <div class="project-text-spaces"></div>
                             <div class="project-cell-button-container">
@@ -373,49 +373,22 @@
                         <div class="project-circle"></div>
                         <!-- <img class="project-background" src="assets/CSK_bgn.png"> -->
                         <div class="project-cell-logo-container">
-                            <img class="project-cell-logo" src="assets/pics/projects/placeholder_logo.svg">
+                            <img class="project-cell-logo" src="assets/pics/projects/viktor-design_logo.svg">
                         </div>
                         <div class="project-cell-description-container">
-                            <div class="project-cell-title">PLACEHOLDER</div>
+                            <div class="project-cell-title">VIKTOR.DESIGN</div>
                             <div class="project-text-spaces"></div>
-                            <div class="project-cell-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nisl nisi scelerisque eu ultrices vitae auctor eu augue. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus.</div>
+                            <div class="project-cell-text">My personal website project. Still requires quite a lot of work. The current goal is to rewrite the pillar to move as many elements as possible from Layout to Composite.</div>
                             <div class="project-text-spaces"></div>
                             <div class="project-text-spaces"></div>
                             <div class="project-cell-button-container">
                                 <div class="project-cell-button" style="opacity: 1; background: none;">
-                                    <div class="project-cell-button-text-frameOut">Learn more about this case on <b>Behance</b></div>
+                                    <div class="project-cell-button-text-frameOut">View source code on <b>GitHub</b></div>
                                 </div>
                                 <div class="project-cell-button">
                                     <div class="project-cell-button-corners" style="left: -20px;"></div>
                                     <div class="project-cell-button-corners" style="right: -20px;"></div>
-                                    <a class="project-cell-button-text-frameIn" href="" target="_blank">Learn more about this case on <b>Behance</b></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-spaces"></div>
-                <div class="project-cell-container">
-                    <div class="project-cell">
-                        <div class="project-circle"></div>
-                        <!-- <img class="project-background" src="assets/CSK_bgn.png"> -->
-                        <div class="project-cell-logo-container">
-                            <img class="project-cell-logo" src="assets/pics/projects/placeholder_logo.svg">
-                        </div>
-                        <div class="project-cell-description-container">
-                            <div class="project-cell-title">PLACEHOLDER</div>
-                            <div class="project-text-spaces"></div>
-                            <div class="project-cell-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nisl nisi scelerisque eu ultrices vitae auctor eu augue. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus.</div>
-                            <div class="project-text-spaces"></div>
-                            <div class="project-text-spaces"></div>
-                            <div class="project-cell-button-container">
-                                <div class="project-cell-button" style="opacity: 1; background: none;">
-                                    <div class="project-cell-button-text-frameOut">Learn more about this case on <b>Behance</b></div>
-                                </div>
-                                <div class="project-cell-button">
-                                    <div class="project-cell-button-corners" style="left: -20px;"></div>
-                                    <div class="project-cell-button-corners" style="right: -20px;"></div>
-                                    <a class="project-cell-button-text-frameIn" href="" target="_blank">Learn more about this case on <b>Behance</b></a>
+                                    <a class="project-cell-button-text-frameIn" href="" target="_blank">View source code on <b>GitHub</b></a>
                                 </div>
                             </div>
                         </div>
@@ -506,7 +479,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="links-cell">
+                    <div class="links-cell"></div>
+                    <!-- <div class="links-cell">
                         <div class="links-cell-grid">
                             <div class="links-cell-grid-empty"></div>
                             <div class="links-cell-grid-empty"></div>
@@ -520,7 +494,7 @@
                                 <div class="links-cell-back-flare"></div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="links-spaces"></div>
                 <div class="project-spaces" style="height: 120px;"></div>

@@ -312,6 +312,21 @@
     opacity: 0;
 }
 
+/* ===== O P T I M I Z A T I O N (not really) ===== */
+
+.ELC-will-change
+{
+  will-change: transform;
+}
+.ELC-will-change > div > .ELC-container
+{
+  will-change: height;
+}
+.ELC-will-change > div > .ELC-container > div
+{
+  will-change: height, width, border-radius;
+}
+
 /* ===== E T C ===== */
 .ELC-margins
 {

@@ -55,7 +55,7 @@
     /* letter-spacing: 50px; */
     /* background: black; */
     line-height: 95%;
-    padding-right: calc(var(--intro-main-text-size) * 0.3);
+    padding-right: calc(var(--intro-main-text-size) * 0.4);
 
     transition: all var(--intro-main-text-speed);
 }

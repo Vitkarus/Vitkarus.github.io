@@ -77,6 +77,7 @@ function stopTiltELC(id)
 // ===== П О Д С В Е Т К А = E L C =====
 function activateMenu(id, action)
 {
+    willChange();
     if (action == 'menu')
     {
         switch(id)
@@ -88,6 +89,7 @@ function activateMenu(id, action)
     }
     if (action == 'ELC')
     {}
+
 }
 function deactivateMenu(id, action)
 {
@@ -135,4 +137,12 @@ function stopReflectLight(id)
         bottomSlate[2].style.opacity = 0;
 
         // stopTiltELC(id);
+}
+
+function willChange()
+{
+    let offsets = document.getElementsByClassName('ELC-offset');
+    for (var i = 0; i < offsets.length; i++){offsets[i].classList.add("ELC-will-change")};
+    setTimeout(remove, 10000);
+    function remove(){for (var i = 0; i < offsets.length; i++){offsets[i].classList.remove("ELC-will-change")};}
 }

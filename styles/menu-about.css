@@ -2,7 +2,7 @@
 .about-frame-container
 {
     position: relative;
-    height: 100%;
+    height: fit-content;
     width: 100%;
 
     display: flex;
@@ -36,8 +36,8 @@
     margin-left: var(--frame-padding);
     margin-right: var(--frame-padding);
 
-    overflow-x: hidden; 
-	overflow-y: scroll;
+    /* overflow-x: hidden; 
+	overflow-y: scroll; */
     scrollbar-width: none;
     /* scrollbar-width: thin; */
 	scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0);

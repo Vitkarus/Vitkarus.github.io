@@ -1,5 +1,5 @@
 var segmentsAmount = 32;
-var projectsAmount = 4;
+var projectsAmount = 3;
 var currentProject = 0;
 var pillarState = 'none';
 
@@ -239,7 +239,12 @@ var introTextsArray = [
     "bottom text. upper text.",
     "why can't safari handle my site :/",
     "there's a lot more to do here.",
-    "graphic design is my passion."
+    "graphic design is my passion.", 
+    "why write random stuff on twitter when you can do it on the main of your website?",
+    "someday i will definitely add a mini-game to my site, like all cool devs do.",
+    "one of the pillar plates is clickable 👀",
+    "do not repeat my mistakes, use a <b>transform</b> to change the size of the elements.",
+    "any tips to improve my site? send me them via email or telegram!"
 ]
 
 function changeIntro()

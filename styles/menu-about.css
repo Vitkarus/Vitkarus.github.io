@@ -62,3 +62,54 @@
     height: var(--frame-padding);
     width: 100%;
 }
+
+/* ===== С В Е Т ===== */
+.about-glow-container
+{
+    position: absolute;
+    right: 0;
+    transform: scaleX(1);
+    transform-origin: center;
+
+    transition: all var(--about-glow-container-speed);
+}
+.about-glow-container-hidden
+{
+    transform: scaleX(0);
+    opacity: 0;
+}
+.about-core-glow
+{
+    position: absolute;
+    right: 0;
+    height: var(--temp-ELC-size);
+    width: var(--temp-ELC-size);
+    margin-top: calc(0px - var(--temp-ELC-size)/3);
+    margin-right: calc(0px - var(--temp-ELC-size)/2);
+    border-radius: 20%;
+
+    filter: blur(15px);
+
+    background: var(--ELC-glov-color1);
+
+    transform: 
+    translateY(calc(0px - var(--temp-ELC-size)/2*var(--temp-ELC-height-scale) * (1 + var(--temp-ELC-height-scale-step) * var(--s)))) 
+    rotateX(60deg) 
+    rotate(45deg) 
+    scale(4);
+}
+.about-core-flare 
+{
+    position: absolute;
+    right: 0;
+  height: 50px;
+  transform: translateX(50%) translateY(-50%);
+  background: radial-gradient(closest-side ellipse at 50% center,
+      var(--ELC-glov-inner-color) 0%,
+      var(--ELC-glov-color1) 30%,
+      transparent 95%);
+  width: calc(var(--temp-ELC-size)*15);
+
+  filter: blur(15px);
+  /* filter: blur(5px); */
+}

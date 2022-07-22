@@ -149,20 +149,25 @@
 .links-waves-container
 {
   position: absolute;
+  right: 0;
 
   display: flex;
   justify-content: center; 
   align-items: center;
 
-  perspective: 1500px;
-  transform:rotateX(60deg);
+  transform-style: preserve-3d;
+    perspective: 100px;
+
+    pointer-events: none;
+
+  transform:rotateX(70deg);
 }
 .links-wave-mask
 {
   position: absolute;
-  height: 300px;
-  width: 300px;
-  opacity: 0;
+  height: calc(var(--n) * 600px + 700px);
+  width: calc(var(--n) * 600px + 700px);
+  opacity: 1;
  
   transform-origin: center;
 
@@ -171,8 +176,16 @@
   radial-gradient(circle at bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1) 100%) bottom;
     -webkit-mask-size:100% 51%; 
     -webkit-mask-repeat:no-repeat; 
+
+    transition: all 1.5s;
     
     animation: rotate-wave var(--links-waves-rotation-speed) infinite;
+    animation-delay: calc(0ms - var(--n)*25000ms);
+}
+.links-wave-mask-hidden
+{
+  opacity: 0;
+  /* filter: blur(5px); */
 }
 .links-wave
 {

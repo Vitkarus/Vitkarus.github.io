@@ -14,8 +14,9 @@
 
 .ST-textlink-container
 {
-    position: relative;
-    top: 7px;
+    position: absolute;
+    top: 15px;
+    /* margin-bottom: calc(0px - var(--ELC-offset-height-global)); */
     left: 15%;
     /* right: 335px; */
     height: 0;
@@ -25,6 +26,8 @@
     align-items: center; */
 
     z-index: 1000;
+
+    
 
     transition: all var(--ST-textlink-container-speed);
 }
@@ -37,6 +40,8 @@
     /* letter-spacing: 50px; */
     /* background: black; */
     cursor: pointer;
+
+    transform: translateY(calc(var(--n) * (30px - var(--ELC-offset-height-global))));
     transition: all var(--ST-speed);
 }
 .ST:active
@@ -60,7 +65,7 @@
 .ST-frame-box
 {
     position: absolute;
-    bottom: -176px;
+    bottom: -200px;
     right: -213px;
     /* right: calc(-225px);
     bottom: calc(-190px + 50%); */

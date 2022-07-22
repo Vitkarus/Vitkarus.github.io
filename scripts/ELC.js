@@ -12,10 +12,10 @@ function createELCs()
         //document.getElementById('pillar').innerHTML += '<div class="ELC-offset" style="--z:' + step +'"><div id="ELCwrapper' + step + '" class="ELC-wrapper-next"><div id="ELCcontainer' + step + '" class="ELC-container"></div>' + segmentCode + '</div></div></div>'; 
         document.getElementById('pillar').insertAdjacentHTML('beforeend', '<div class="ELC-offset" style="--z:' + step +'; --s:' + Math.abs(step) + '"><div id="ELCwrapper' + step + '" class="ELC-wrapper-next"><div id="ELCcontainer' + step + '" class="ELC-container" onmouseover="startReflectLight(' + step + ')" onmouseout="stopReflectLight(' + step + ')">' + segmentCode + '</div></div></div>'); 
     }
-    for (step = 0; step < 9; step++) 
-    {
-        document.getElementById('ELCcontainer1').insertAdjacentHTML('afterbegin','<div class="ELC-top"></div>');
-    }
+    // for (step = 0; step < 9; step++) 
+    // {
+    //     document.getElementById('ELCcontainer1').insertAdjacentHTML('afterbegin','<div class="ELC-top"></div>');
+    // }
 }
 function arrangeELCs()
 {
@@ -25,16 +25,16 @@ function arrangeELCs()
     var j = 50; //96
     for (step = 0; step < (segmentsHalf + 1); step++) 
     {
-        document.getElementById('ELCwrapper' + step).parentElement.style.transform = 'translateX(' + step*j + 'px)';
-        document.getElementById('ELCwrapper' + (0 - step)).parentElement.style.transform = 'translateX(' + (0 - step*j) + 'px)';
+        document.getElementById('ELCwrapper' + step).parentElement.style.cssText += '--ELC-offset-X-global:' + step*j + 'px;';
+        document.getElementById('ELCwrapper' + (0 - step)).parentElement.style.cssText += '--ELC-offset-X-global:' + (0 - step*j) + 'px;';
         j = j - 3;
     }
     i = 1;
     j = 50; //93
     for (step = (segmentsAmount - 1); step > (segmentsHalf - 1); step--) 
     {
-        document.getElementById('ELCwrapper' + step).parentElement.style.transform = 'translateX(' + i*j + 'px)';
-        document.getElementById('ELCwrapper' + (0 - step)).parentElement.style.transform = 'translateX(' + (0 - i*j) + 'px)';
+        document.getElementById('ELCwrapper' + step).parentElement.style.cssText += '--ELC-offset-X-global:' + i*j + 'px;';
+        document.getElementById('ELCwrapper' + (0 - step)).parentElement.style.cssText += '--ELC-offset-X-global:' + (0 - i*j) + 'px;';
         i++;
         j = j - 3;
     }

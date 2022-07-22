@@ -2,6 +2,9 @@
 {
   /* ===== S I Z E S ===== */
 
+  --temp-ELC-size: 128px;
+  --temp-ELC-diag: 180px;
+
   --max-webpage-width: 1920px;
   --max-menus-width: 1280px;
 
@@ -9,32 +12,32 @@
 
   /* ===== P I L L A R ===== */
 
-    --ELC-length-global: 200px;
-    --ELC-border-radius-global: 35px;
-    --ELC-height-global: 13px;
-    --ELC-margins-global: 20px;
+    --temp-ELC-height-scale: 0.3;
+    --temp-ELC-width-scale: 3;
+    --temp-ELC-border-radius: 20;
 
-    --ELC-offset-height-global: 55px;
-    --ELC-offset-step-global: 2px;
+    --ELC-offset-height-global: -55px;
+    --ELC-offset-step-global: 0.02;
     --ELC-offset-width-global: 66%;
 
-    --ELC-length-step-global: 6px;
-    --ELC-border-radius-step-global: 1px;
-    --ELC-height-step-global: 2px;
+    --temp-ELC-height-scale-step: 0.1;
+    --temp-ELC-width-scale-step: -0.03;
+    --temp-ELC-border-radius-step: 0.1;
 
-    --ELC-transformY-global: 20vh;
+    --temp-ELC-top-shadow-scale: 1;
+    --temp-ELC-top-shadow-X: -10%;
+    --temp-ELC-top-shadow-Y: -30%;
+
+    --ELC-transformY-global: 150px;
     --ELC-transformY-global-for-content: 0vh;
 
-    --ELC-shadow-NW-indent: 0px;
-    --ELC-shadow-SE-indent: 20px;
-    --ELC-shadow-NE-indent: 0px;
-    --ELC-shadow-SW-indent: 45px;
-
+    --ELC-margins-global: 0px;
+    
     /* === Initial === */
 
-    --ELC-length-global: 0px;
-    --ELC-border-radius-global: 0px;
-    --ELC-height-global: 0px;
+    --temp-ELC-height-scale: 0;
+    --temp-ELC-width-scale: 0;
+    --temp-ELC-border-radius: 0;
 
   /* ===== I N T R 0 ===== */
 

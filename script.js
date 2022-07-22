@@ -85,19 +85,31 @@ function reshapeSphere(action)
 function reshapeWaves(action)
 {
     let waves = document.getElementById('waves').getElementsByClassName("links-wave-mask");
-    console.log('blahaha');
 
-    if (action == 'expand'){for (var i = 0; i < 5; i++){setTimeout(showWaves, i*getCSSvar('--reshapeWaves-expand-setTimeout'), i);}}
-    if (action == 'colapse'){for (var i = 0; i < 5; i++){setTimeout(hideWaves, i*getCSSvar('--reshapeWaves-colapse-setTimeout'), i);}}
-
-    function showWaves(i)
+    if (action == 'expand')
     {
-        waves[i].style.opacity = 1;
-        waves[i].style.height = (i+1)*600 + "px";
-        waves[i].style.width = (i+1)*600 + "px";
-        waves[i].style.animationDelay = 0-(i+1)*25000 + "ms";
+        for (var i = 0; i < 5; i++)
+        {
+            setTimeout(showWaves, (i+1)*500, i);
+        }
     }
-    function hideWaves(i){waves[i].removeAttribute('style');}
+    if (action == 'colapse')
+    {
+        for (var i = 0; i < 5; i++)
+        {
+            waves[i].classList.add('links-wave-mask-hidden');
+        }
+    }
+    function showWaves(i){waves[i].classList.remove('links-wave-mask-hidden');}
+
+    // function showWaves(i)
+    // {
+    //     waves[i].style.opacity = 1;
+    //     waves[i].style.height = (i+1)*600 + "px";
+    //     waves[i].style.width = (i+1)*600 + "px";
+    //     waves[i].style.animationDelay = 0-(i+1)*25000 + "ms";
+    // }
+    // function hideWaves(i){waves[i].removeAttribute('style');}
 }
 
 function menu(action)

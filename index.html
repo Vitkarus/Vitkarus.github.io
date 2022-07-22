@@ -38,16 +38,16 @@
     <div class="container">
         <div class="top-bra-container" id="topBar">
             <div class="top-bar-wrapper top-bar-wrapper-hidden">
-                <div class="top-bar-item" onmouseover="willChange()" onmouseup="stateMachine('menu', 'topBar'); stateMachine('about', 'topBar')">about</div>
+                <div class="top-bar-item" onmouseover="" onmouseup="stateMachine('menu', 'topBar'); stateMachine('about', 'topBar')">about</div>
             </div>
             <div class="top-bar-wrapper top-bar-wrapper-hidden">
-                <div class="top-bar-item" onmouseover="willChange()" onmouseup="stateMachine('menu', 'topBar'); stateMachine('projects', 'topBar')">projects</div>
+                <div class="top-bar-item" onmouseover="" onmouseup="stateMachine('menu', 'topBar'); stateMachine('projects', 'topBar')">projects</div>
             </div>
             <div class="top-bar-wrapper top-bar-wrapper-hidden">
-                <div class="top-bar-item" onmouseover="willChange()" onmouseup="stateMachine('menu', 'topBar'); stateMachine('links', 'topBar')">links</div>
+                <div class="top-bar-item" onmouseover="" onmouseup="stateMachine('menu', 'topBar'); stateMachine('links', 'topBar')">links</div>
             </div>
         </div>
-        <div class="logo-container" onmouseover="willChange()" onmouseup="stateMachine('menu')">
+        <div class="logo-container" onmouseover="" onmouseup="stateMachine('menu')">
             <!-- <div class="logo-text">Viktor<br>Nikitinskiy</div> -->
             <div class="logo logo-cross logo-hidden" id="logo">
                 <div class="logo-V1">                        
@@ -92,8 +92,8 @@
                 <div class="intro-menu-space"></div>
             </div>
         <div id="pillar" class="ELC-pillar">
-            <div class="ELC-margins"></div>
-            <div class="ST-textlink-container ST-hidden">
+            <!-- <div class="ELC-margins"></div> -->
+            <div style="--n:-1" class="ST-textlink-container ST-hidden">
                 <div class="ST" onmouseover="activateMenu('aboutText', 'menu')" onmouseout="deactivateMenu('aboutText', 'menu')" onmouseup="stateMachine('about', 'none')">about</div>
             </div>
             <div class="ELC-offset" style="--z:1; --s:1">
@@ -116,15 +116,7 @@
                         <div class="ELC-top" style="transform: translateY(-50%) rotateX(60deg) rotateZ(-45deg) rotateY(90deg);"></div> -->
                         <div class="ELC-top">
                             <div class="ELC-lightning-top">
-                                <div class="ELC-lightning-top-empty"></div>
-                                <div class="ELC-lightning-top-empty"></div>
-                                <div class="ELC-lightning-top-empty"></div>
-                                <div class="ELC-lightning-top-empty"></div>
                                 <div class="ELC-lightning-top-shadow"></div>
-                                <div class="ELC-lightning-top-empty"></div>
-                                <div class="ELC-lightning-top-empty"></div>
-                                <div class="ELC-lightning-top-empty"></div>
-                                <div class="ELC-lightning-top-empty"></div>
                             </div>
                             <!-- <div class="ELC-texture"></div> -->
                             <div class="ELC-lightning-receiving"></div>
@@ -154,11 +146,32 @@
                     </div>
                 </div>
             </div>
-            <div class="ELC-margins"></div>
-            <div class="ST-textlink-container ST-hidden">
+            <!-- <div class="ELC-margins"></div> -->
+            <div class="ST-textlink-container ST-hidden" style="--n: 0">
                 <div class="ST" onmouseover="activateMenu('projectsText', 'menu')" onmouseout="deactivateMenu('projectsText', 'menu')" onmouseup="stateMachine('projects', 'none')">projects</div>
             </div>
             <div class="ELC-offset" style="--z:0; --s:0">
+                <div id="core" class="about-glow-container about-glow-container-hidden">
+                    <div class="about-core-glow"></div>
+                    <div class="about-core-flare"></div>
+                </div>
+                <div id="waves" class="links-waves-container">
+                    <div class="links-wave-mask links-wave-mask-hidden" style="--n:1">
+                        <div class="links-wave"></div>
+                    </div>
+                    <div class="links-wave-mask links-wave-mask-hidden" style="--n:2">
+                        <div class="links-wave"></div>
+                    </div>
+                    <div class="links-wave-mask links-wave-mask-hidden" style="--n:3">
+                        <div class="links-wave"></div>
+                    </div>
+                    <div class="links-wave-mask links-wave-mask-hidden" style="--n:4">
+                        <div class="links-wave"></div>
+                    </div>
+                    <div class="links-wave-mask links-wave-mask-hidden" style="--n:5">
+                        <div class="links-wave"></div>
+                    </div>
+                </div>
                 <div class="ST-frame-box ST-hidden">
                     <div class="ST-frame-container">
                         <div class="ST-angle-mask">
@@ -176,15 +189,7 @@
                         <div class="ELC-lightning-flare"></div>
                         <div class="ELC-top">
                             <div class="ELC-lightning-top">
-                                <div class="ELC-lightning-top-empty"></div>
-                                <div class="ELC-lightning-top-empty"></div>
-                                <div class="ELC-lightning-top-empty"></div>
-                                <div class="ELC-lightning-top-empty"></div>
                                 <div class="ELC-lightning-top-shadow"></div>
-                                <div class="ELC-lightning-top-empty"></div>
-                                <div class="ELC-lightning-top-empty"></div>
-                                <div class="ELC-lightning-top-empty"></div>
-                                <div class="ELC-lightning-top-empty"></div>
                             </div>
                             <!-- <div class="ELC-texture"></div> -->
                             <div class="ELC-lightning-receiving"></div>
@@ -214,8 +219,8 @@
                     </div>
                 </div>
             </div>
-            <div class="ELC-margins"></div>
-            <div class="ST-textlink-container ST-hidden">
+            <!-- <div class="ELC-margins"></div> -->
+            <div class="ST-textlink-container ST-hidden" style="--n: 1">
                 <div class="ST" onmouseover="activateMenu('linksText', 'menu')" onmouseout="deactivateMenu('linksText', 'menu')" onmouseup="stateMachine('links', 'none')">links</div>
             </div>
             <div class="ELC-offset" style="--z:-1; --s:1">
@@ -236,15 +241,7 @@
                         <div class="ELC-lightning-flare"></div>
                         <div class="ELC-top">
                             <div class="ELC-lightning-top">
-                                <div class="ELC-lightning-top-empty"></div>
-                                <div class="ELC-lightning-top-empty"></div>
-                                <div class="ELC-lightning-top-empty"></div>
-                                <div class="ELC-lightning-top-empty"></div>
                                 <div class="ELC-lightning-top-shadow"></div>
-                                <div class="ELC-lightning-top-empty"></div>
-                                <div class="ELC-lightning-top-empty"></div>
-                                <div class="ELC-lightning-top-empty"></div>
-                                <div class="ELC-lightning-top-empty"></div>
                             </div>
                             <!-- <div class="ELC-texture"></div> -->
                             <div class="ELC-lightning-receiving"></div>
@@ -260,23 +257,6 @@
                             <!-- <div class="ELC-texture"></div> -->
                             <div class="ELC-lightning-receiving"></div>
                         </div>
-                        <div id="waves" class="links-waves-container">
-                            <div class="links-wave-mask">
-                                <div class="links-wave"></div>
-                            </div>
-                            <div class="links-wave-mask">
-                                <div class="links-wave"></div>
-                            </div>
-                            <div class="links-wave-mask">
-                                <div class="links-wave"></div>
-                            </div>
-                            <div class="links-wave-mask">
-                                <div class="links-wave"></div>
-                            </div>
-                            <div class="links-wave-mask">
-                                <div class="links-wave"></div>
-                            </div>
-                        </div>
                         <div class="ELC-bottom">
                             <div class="ELC-lightning-bottom">
                                  <div class="ELC-lightning-segment-1"></div>
@@ -291,7 +271,7 @@
                     </div>
                 </div>
             </div>
-            <div class="ELC-margins"></div>
+            <!-- <div class="ELC-margins"></div> -->
         </div>
         <div id="about" class="menus-container limiter">
             <div class="about-spaces menus-hidden-item"></div>

@@ -117,9 +117,12 @@ function startReflectLight(id)
         bottomSlate[1].style.opacity = 0.3;
         bottomSlate[2].style.opacity = 0.3;
 
-        
+   if (id <= 0 && id >= 1-projectsAmount)
+   {
     selectProject(id);
     scrollToProject(id);
+   }     
+    
     // startTiltELC(id);
 }
 function stopReflectLight(id)

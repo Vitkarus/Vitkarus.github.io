@@ -28,6 +28,8 @@ function stateMachine(state, place)
         addGaps(2, 3, 30);
     }
 
+    cleanChanges();
+
 // === main menu ===
 
     if (state == 'menu')
@@ -50,6 +52,8 @@ function stateMachine(state, place)
                 setTimeout(applyMenuVariables, i*getCSSvar('--stateMachine-applyMenuVariables-setTimeout'), segmentsAmount * 2 - 1 - i);
             }
         }
+
+        pillarState = 'menu';
 
         // Applying variables to ELCs, can be used with delay
         
@@ -82,26 +86,7 @@ function stateMachine(state, place)
 
         document.documentElement.style.setProperty('--ELC-transformY-global', "150px");
 
-        // Cancelling Projects styles
-
-        for (var i = (0); i > (0 - projectsAmount); i--) 
-        {
-            document.getElementById('ELCwrapper' + i).parentElement.style.marginTop = '0px';
-            document.getElementById('ELCwrapper' + i).parentElement.style.marginBottom = '0px';
-        }
-        for (var i = (-2); i > (0 - projectsAmount); i--) 
-        {document.getElementById('ELCwrapper' + i).className = 'ELC-wrapper-next';}
-
         // Functions
-
-        // reshapeSphere('colapse');
-        reshapeWaves('colapse');
-        
-        setTimeout(switchItems, 0, 'hide', 'about');
-        setTimeout(switchItems, 0, 'hide', 'links');
-        setTimeout(switchItems, 0, 'hide', 'projects');
-
-        highlightPyramid('off');
 
         if (place == 'topBar')
         {
@@ -118,8 +103,6 @@ function stateMachine(state, place)
             arrangeELCs();
             addGaps(2, 3, 30);
         }
-
-        pillarState = 'menu';
         // setTimeout(deactivateMenu, getCSSvar('--stateMachine-mainmenu-deactivateMenu-setTimeout'), 'aboutText', 'menu');
         // document.documentElement.style.setProperty('--ELC-transformY-global-for-content', "0vh");
     }
@@ -146,6 +129,8 @@ function stateMachine(state, place)
                  setTimeout(applyAboutVariables, i*getCSSvar('--stateMachine-applyMenuVariables-setTimeout'), segmentsAmount * 2 - i);
              }
          }
+
+         pillarState = 'about';
 
         // Applying variables to ELCs, can be used with delay   
 
@@ -203,8 +188,6 @@ function stateMachine(state, place)
         setTimeout(addGaps, segmentsAmount * 1.5 * getCSSvar('--stateMachine-applyMenuVariables-setTimeout'), 1, 1, 50);
 
         setTimeout(highlightPyramid, segmentsAmount * 1.5 * getCSSvar('--stateMachine-applyMenuVariables-setTimeout'), 'on');
-
-        pillarState = 'about';
         // setTimeout(activateMenu, 0, 'aboutText', 'menu');
     }
 
@@ -212,7 +195,6 @@ function stateMachine(state, place)
 
     if (state == 'projects')
     {
-        pillarState = 'projects';
         // Transition from center
 
         if (pillarState == 'menu' || 'links')
@@ -231,6 +213,8 @@ function stateMachine(state, place)
                 setTimeout(applyProjectsVariables, i*getCSSvar('--stateMachine-applyMenuVariables-setTimeout'), segmentsAmount * 2 - i);
             }
         }
+
+        pillarState = 'projects';
 
         // Applying variables to ELCs, can be used with delay
 
@@ -312,6 +296,8 @@ function stateMachine(state, place)
             }
         }
 
+        pillarState = 'links';
+
         // Applying variables to ELCs, can be used with delay
 
         function applyLinksVariables(id)
@@ -329,8 +315,8 @@ function stateMachine(state, place)
             offsets[id].style.setProperty('--temp-ELC-border-radius-step', "0.1");
     
             offsets[id].style.setProperty('--temp-ELC-top-shadow-scale', "1");
-            offsets[id].style.setProperty('--temp-ELC-top-shadow-X', "-10%");
-            offsets[id].style.setProperty('--temp-ELC-top-shadow-Y', "-30%");
+            offsets[id].style.setProperty('--temp-ELC-top-shadow-X', "-30%");
+            offsets[id].style.setProperty('--temp-ELC-top-shadow-Y', "0%");
         }
 
         // Applying classes to main ELCs
@@ -358,8 +344,6 @@ function stateMachine(state, place)
         centerELCs();
 
         addGaps(0, 1, 0);
-
-        pillarState = 'links';
         // document.getElementById('ELCwrapper0').style.setProperty('--ELC-glass-color', 'var(--ELC-glass-color2)');
     }
 }
@@ -415,4 +399,33 @@ function centerELCs()
 {
     var step;
     for (step = (1 - segmentsAmount); step < (segmentsAmount); step++) {document.getElementById('ELCwrapper' + step).parentElement.style.setProperty('--ELC-offset-X-global', "0px");}
+}
+
+function cleanChanges()
+{
+    // Applying classes to main ELCs
+
+    document.getElementById('ELCwrapper1').className = 'ELC-wrapper-1';
+    document.getElementById('ELCwrapper0').className = 'ELC-wrapper-0';
+    document.getElementById('ELCwrapper-1').className = 'ELC-wrapper-1';
+    
+    // Functions
+
+    reshapeWaves('colapse');
+        
+    setTimeout(switchItems, 0, 'hide', 'about');
+    setTimeout(switchItems, 0, 'hide', 'links');
+    setTimeout(switchItems, 0, 'hide', 'projects');
+
+    highlightPyramid('off');
+
+    // Cancelling Projects styles
+
+    for (var i = (0); i > (0 - projectsAmount); i--) 
+    {
+        document.getElementById('ELCwrapper' + i).parentElement.style.marginTop = '0px';
+        document.getElementById('ELCwrapper' + i).parentElement.style.marginBottom = '0px';
+    }
+    for (var i = (-2); i > (0 - projectsAmount); i--) 
+    {document.getElementById('ELCwrapper' + i).className = 'ELC-wrapper-next';}
 }
